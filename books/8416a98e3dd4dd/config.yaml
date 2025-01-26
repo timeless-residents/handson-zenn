@@ -1,0 +1,9 @@
+title: "Zennで学ぶWeb開発入門"
+summary: "Zennを使ってWeb開発の基礎を学ぶための入門書です。"
+topics: ["zenn", "webdev", "tutorial", "beginner"]
+published: false
+price: 500
+chapters:
+  - introduction
+  - html_css
+  - javascript_basics
