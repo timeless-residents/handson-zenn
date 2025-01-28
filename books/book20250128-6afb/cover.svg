@@ -1,0 +1,32 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#F5F5F5"/>
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#E0E0E0"/>
+      <rect x="10" y="10" width="10" height="10" fill="#E0E0E0"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.2"/>
+  <g transform="translate(25, 50)">
+  <text x="25" y="150" font-size="102" font-weight="bold" text-rendering="optimizeLegibility" fill="#2E7BB9" style="text-shadow: 1px 1px 2px #0000001A; stroke: white; stroke-width: 2px;">
+    <tspan x="25" dy="0">VS Code</tspan>
+    <tspan x="25" dy="105">環境構築</tspan>
+    </text>
+  <text x="25" y="340" font-size="68" font-weight="bold" text-rendering="optimizeLegibility" fill="#2E7BB9" style="text-shadow: 1px 1px 2px #0000001A; stroke: white; stroke-width: 2px;">
+     <tspan x="25" dy="0">実践ガイド</tspan>
+    </text>
+   <text x="25" y="420" font-size="44" text-rendering="optimizeLegibility" fill="#2E7BB9" >
+    <tspan x="25" dy="0">チーム開発を加速する</tspan>
+    <tspan x="25" dy="55">設定共有と最適化戦略</tspan>
+  </text>
+ <rect x="35" y="550" width="40" height="40" fill="#34C1F4" rx="5"/>
+   <rect x="85" y="550" width="40" height="40" fill="#34C1F4" rx="5" transform="translate(20,10)"/>
+      <rect x="135" y="550" width="40" height="40" fill="#34C1F4" rx="5" transform="translate(40,20)"/>
+
+  </g>
+  <style>
+    text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+  </style>
+</svg>

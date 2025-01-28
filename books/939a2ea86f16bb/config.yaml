@@ -1,0 +1,16 @@
+title: "Picovoiceではじめる組み込み音声AI開発入門"
+summary: "Picovoiceを使って、キーフレーズ検出、音声認識、意図解釈を組み込んだ音声アプリケーションを開発するための実践的な入門書です。初心者でもステップバイステップで学習を進められるように、基本から応用までを丁寧に解説します。"
+topics: ["音声認識", "自然言語処理", "AI", "組み込み", "Python", "Node.js", "Picovoice", "IoT"]
+published: false
+price: 500 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - "introduction" # はじめに
+  - "basic"       # Picovoiceの基本
+  - "porcupine"   # キーワード検出 (Porcupine) を極める
+  - "rhino"       # 意図解釈 (Rhino) を使いこなす
+  - "eagle"       # 音声認識 (Eagle) を活用する
+  - "projects"    # 実践プロジェクト
+  - "advanced"    # 応用編
+  - "appendix"    # 付録
+  - "conclusion" # おわりに

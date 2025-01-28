@@ -1,0 +1,172 @@
+{
+  "main": {
+    "id": "08bf887a2b37d995",
+    "type": "split",
+    "children": [
+      {
+        "id": "57c9f39fef31de1b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f3d5ef7b2a33cd3a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "efceb1f1383229c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b4956313ac06a62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7242c20292d2dda0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c0a7a6641ccf2f09",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f4e9c90925488032",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c00858a8c908d341",
+    "type": "split",
+    "children": [
+      {
+        "id": "46f2dda07bdc1b07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2009487e92cbd9aa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "books/8416a98e3dd4dd/javascript_basics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for javascript_basics"
+            }
+          },
+          {
+            "id": "9ad608d6f604cebd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "books/8416a98e3dd4dd/javascript_basics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from javascript_basics"
+            }
+          },
+          {
+            "id": "ca0653113eb02805",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b6c8c1aa1279bbb1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "books/8416a98e3dd4dd/javascript_basics.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of javascript_basics"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "f3d5ef7b2a33cd3a",
+  "lastOpenFiles": [
+    "books/939a2ea86f16bb/example2.md",
+    "books/939a2ea86f16bb/example1.md",
+    "books/939a2ea86f16bb/config.yaml",
+    "books/939a2ea86f16bb",
+    "books/8416a98e3dd4dd/javascript_basics.md",
+    "books/8416a98e3dd4dd/html_css.md",
+    "books/8416a98e3dd4dd/introduction.md",
+    "books/8416a98e3dd4dd/cover.png"
+  ]
+}
