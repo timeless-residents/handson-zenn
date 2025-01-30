@@ -1,0 +1,21 @@
+title: "実践！Hammerspoon & AppleScript連携によるmacOS自動化レシピ集"
+summary: |-
+  本書は、実践！Hammerspoon & AppleScript連携によるmacOS自動化レシピ集に関する実践的なガイドです。
+  各章では具体的な実装例とベストプラクティスを交えながら、
+  段階的に理解を深められる構成となっています。
+
+topics: 
+  - programming
+  - development
+  - technology
+  - engineering
+  - guide
+
+published: true
+price: 1000
+chapters:
+  - ch20250130-cc19
+  - ch20250130-c3b7
+  - ch20250130-8fae
+  - ch20250130-4139
+  - ch20250130-5f57

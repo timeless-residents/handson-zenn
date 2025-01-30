@@ -1,0 +1,36 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#f0f0f0"/>
+    <defs>
+        <filter id="textShadow">
+            <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.4"/>
+        </filter>
+    </defs>
+    <g transform="translate(25, 50)">
+        <text x="0" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#3498db" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+            <tspan x="0" dy="0">実践！</tspan>
+        </text>
+        <text x="0" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="108" font-weight="bold" fill="#3498db" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+            <tspan x="0" dy="0">Hammer</tspan>
+            <tspan x="0" dy="80">spoon &amp; </tspan>
+        </text>
+         <text x="0" y="340" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#3498db" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+            <tspan x="0" dy="0">Apple</tspan>
+            <tspan x="0" dy="80">Script</tspan>
+        </text>
+       <text x="0" y="490" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="60" font-weight="bold" fill="#2ecc71" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+            <tspan x="0" dy="0">macOS自動化</tspan>
+        </text>
+          <text x="0" y="550" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="60" font-weight="bold" fill="#2ecc71" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+            <tspan x="0" dy="0">レシピ集</tspan>
+        </text>
+
+    </g>
+    <g transform="translate(400, 600) scale(0.15)" fill="#3498db">
+    <path d="M256 0l-52.5 171.6c-17.2 56.5-20.1 84.1-5.5 122.5 16.2 42.3 50.2 76.3 90.1 95.8l32.8 16 32.8-16c39.9-19.5 73.9-53.5 90.1-95.8 14.5-38.5 11.6-66.1-5.5-122.5L256 0zM398.5 216.7c-6.9 19-14.6 38.3-23.1 57.9-8.5 19.6-17.4 39.1-26.8 58.5-4.7 9.7-9.4 19.4-14 29-24.3 49.9-68.5 72.2-112.8 58.9l-21.8-6.8-21.8 6.8c-44.3 13.3-88.5-9-112.8-58.9-4.7-9.6-9.4-19.3-14-29-9.4-19.4-18.3-38.9-26.8-58.5-8.5-19.7-16.1-39-23.1-57.9 6.2 11.5 12.9 23 19.9 34.4 7 11.4 14.1 22.9 21.2 34.1 11.7 19.8 24.3 39 37.8 57.7 16.4 22.7 34.9 44.5 54.2 65.2 28.6 29.3 59.1 55.3 90.6 77.4 31.5-22.1 62-48.1 90.6-77.4 19.2-20.7 37.7-42.5 54.2-65.2 13.6-18.7 26.2-38 37.8-57.7 7.1-11.3 14.1-22.7 21.2-34.1 6.9-11.4 13.6-23 19.9-34.4z"/>
+    <circle cx="256" cy="188" r="27"/>
+        </g>
+    
+   <g transform="translate(10, 600) scale(0.15)" fill="#2ecc71">
+        <path d="M416 128h-384c-17.7 0-32 14.3-32 32v256c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32v-256c0-17.7-14.3-32-32-32zM128 384h-32v-32h32v32zm0-64h-32v-32h32v32zm0-64h-32v-32h32v32zm256 128h-32v-32h32v32zm0-64h-32v-32h32v32zm0-64h-32v-32h32v32z"/>
+    </g>
+</svg>
