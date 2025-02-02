@@ -1,0 +1,22 @@
+title: "実践！AWS Lambda 通知システム構築：設計から運用、トラブルシューティングまで"
+summary: |-
+  本書は、実践！AWS Lambda 通知システム構築：設計から運用、トラブルシューティングまでに関する実践的なガイドです。
+  各章では具体的な実装例とベストプラクティスを交えながら、
+  段階的に理解を深められる構成となっています。
+
+topics: 
+  - programming
+  - development
+  - technology
+  - engineering
+  - guide
+
+published: true
+price: 1000
+chapters:
+  - ch20250202-0c5a
+  - ch20250202-525d
+  - ch20250202-b54d
+  - ch20250202-41fe
+  - ch20250202-52b5
+  - ch20250202-b01e
