@@ -1,0 +1,22 @@
+title: "実践！Apple MLXとPythonで学ぶ次世代機械学習環境構築"
+summary: |-
+  本書は、実践！Apple MLXとPythonで学ぶ次世代機械学習環境構築に関する実践的なガイドです。
+  各章では具体的な実装例とベストプラクティスを交えながら、
+  段階的に理解を深められる構成となっています。
+
+topics: 
+  - programming
+  - development
+  - technology
+  - engineering
+  - guide
+
+published: true
+price: 1000
+chapters:
+  - ch20250203-3dc7
+  - ch20250203-7506
+  - ch20250203-cf57
+  - ch20250203-3c4a
+  - ch20250203-97e5
+  - ch20250203-7378
