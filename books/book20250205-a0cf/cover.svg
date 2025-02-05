@@ -1,0 +1,31 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F9FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#696C6F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <rect x="8" y="8" width="482" height="684" rx="15" fill="#FFFFFF" fill-opacity="0.8"/>
+
+  <g transform="translate(250, 150)" text-anchor="middle">
+    <text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="bold" fill="#007BFF" stroke="white" stroke-width="1.5" text-rendering="optimizeLegibility">
+      <tspan x="0" dy="-0.5em" font-size="1.5em">レガシー</tspan>
+      <tspan x="0" dy="1.0em" font-size="2.5em">COBOL</tspan>
+      <tspan x="0" dy="1.3em" font-size="1.0em">モダナイゼーション</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(250, 350)" text-anchor="middle">
+    <text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="70" font-weight="bold" fill="#28A745" stroke="white" stroke-width="0.5" text-rendering="optimizeLegibility">
+      <tspan x="0" dy="0.8em">クラウド移行と</tspan>
+      <tspan x="0" dy="1.2em">アジャイル開発</tspan>
+      <tspan x="0" dy="1.2em">実践ガイド</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(250, 650)" text-anchor="middle">
+  <path d="M15 24 L43 24 C47 24 50 27 50 31 L50 52 C50 56 47 59 43 59 L15 59 C11 59 8 56 8 52 L8 31 C8 27 11 24 15 24 Z M29 0 L57 17 C61 19 61 25 57 27 L29 44 L1 27 C-3 25 -3 19 1 17 L29 0 Z M29 64 L1 81 C-3 83 -3 89 1 91 L29 108 L57 91 C61 89 61 83 57 81 L29 64 Z" fill="#007BFF" transform="translate(-29,-54) scale(0.6)"/>
+  </g>
+</svg>
