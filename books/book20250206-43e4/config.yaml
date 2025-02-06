@@ -1,0 +1,21 @@
+title: "実践 クラウドモニタリング - Datadog, OpenCost, 自動化による効率的な運用とコスト最適化"
+summary: |-
+  本書は、実践 クラウドモニタリング - Datadog, OpenCost, 自動化による効率的な運用とコスト最適化に関する実践的なガイドです。
+  各章では具体的な実装例とベストプラクティスを交えながら、
+  段階的に理解を深められる構成となっています。
+
+topics: 
+  - programming
+  - development
+  - technology
+  - engineering
+  - guide
+
+published: true
+price: 1000
+chapters:
+  - ch20250206-08b0
+  - ch20250206-de5e
+  - ch20250206-553f
+  - ch20250206-2c2d
+  - ch20250206-8b08

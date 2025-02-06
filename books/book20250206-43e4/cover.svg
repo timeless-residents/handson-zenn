@@ -1,0 +1,40 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0F0F0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0E0E0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <g transform="translate(25, 50)">
+    <text x="0" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#635BFF" text-rendering="optimizeLegibility" filter="url(#textShadow)" textLength="450">
+      <tspan x="0" dy="0em">実践</tspan>
+    </text>
+    <text x="0" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#29ABE2" text-rendering="optimizeLegibility" filter="url(#textShadow)"  textLength="450">
+      <tspan x="0" dy="0em">クラウド</tspan>
+    </text>
+    <text x="0" y="240" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#635BFF" text-rendering="optimizeLegibility" filter="url(#textShadow)" textLength="450" lengthAdjust="spacingAndGlyphs">
+      <tspan x="0" dy="0em"  font-size="80" >モニタリング</tspan>
+    </text>
+
+    <rect x="0" y="300" width="450" height="4" fill="#635BFF"/>
+
+    <text x="0" y="380" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" fill="#333" text-rendering="optimizeLegibility" >
+      <tspan x="0" dy="0em"  textLength="400">Datadog, OpenCost,</tspan>
+      <tspan x="0" dy="1.4em"   textLength="450">自動化による効率的な運用と</tspan>
+      <tspan x="0" dy="1.4em"   textLength="400">コスト最適化</tspan>
+    </text>
+
+    <path d="M 350,580 C 380,600 420,600 450,580 L 450,630 C 420,650 380,650 350,630 Z" fill="#29ABE2" />
+
+    <circle cx="70" cy="600" r="50" fill="#635BFF" />
+    <circle cx="180" cy="600" r="50" fill="#29ABE2" />
+    <circle cx="290" cy="600" r="50" fill="#635BFF" />
+
+  </g>
+</svg>
