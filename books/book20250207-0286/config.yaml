@@ -1,0 +1,23 @@
+title: "実践 システム信頼性エンジニアリング (SRE): 安定運用と継続的改善"
+summary: |-
+  本書は、実践 システム信頼性エンジニアリング (SRE): 安定運用と継続的改善に関する実践的なガイドです。
+  各章では具体的な実装例とベストプラクティスを交えながら、
+  段階的に理解を深められる構成となっています。
+
+topics: 
+  - programming
+  - development
+  - technology
+  - engineering
+  - guide
+
+published: true
+price: 1000
+chapters:
+  - ch20250207-eb6b
+  - ch20250207-0073
+  - ch20250207-39db
+  - ch20250207-6cb4
+  - ch20250207-1c31
+  - ch20250207-81fd
+  - ch20250207-e1ef

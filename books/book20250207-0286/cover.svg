@@ -1,0 +1,34 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#ECF0F1"/>
+
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ECF0F1"/>
+      <stop offset="100%" stop-color="#BDC3C7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <circle cx="250" cy="550" r="150" fill="#3498DB" opacity="0.15"/>
+  <circle cx="100" cy="200" r="80" fill="#F39C12" opacity="0.2"/>
+  <circle cx="400" cy="100" r="100" fill="#3498DB" opacity="0.1"/>
+
+  <g transform="translate(250, 100)" text-anchor="middle">
+    <text x="0" y="0" font-size="106" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" fill="#3498DB" stroke="white" stroke-width="2" text-rendering="optimizeLegibility">実践</text>
+    <text x="0" y="110" font-size="126" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" fill="#3498DB" stroke="white" stroke-width="2" text-rendering="optimizeLegibility">システム</text>
+    <text x="0" y="230" font-size="136" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" fill="#3498DB" stroke="white" stroke-width="2" text-rendering="optimizeLegibility">信頼性</text>
+  </g>
+
+  <g transform="translate(250, 320)" text-anchor="middle">
+    <text x="0" y="80" font-size="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" fill="#F39C12" stroke="white" stroke-width="1" text-rendering="optimizeLegibility">エンジニアリング</text>
+    <text x="0" y="200" font-size="158" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" fill="#F39C12" stroke="white" stroke-width="1" text-rendering="optimizeLegibility">SRE</text>
+
+  </g>
+
+  <g transform="translate(250, 520)" text-anchor="middle">
+    <text x="0" y="80" font-size="82" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" fill="#3498DB" stroke="white" stroke-width="0.5" text-rendering="optimizeLegibility">安定運用と</text>
+    <text x="0" y="160" font-size="82" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" fill="#3498DB" stroke="white" stroke-width="0.5" text-rendering="optimizeLegibility">継続的改善</text>
+  </g>
+
+</svg>
