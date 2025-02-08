@@ -1,0 +1,25 @@
+title: "Webpack 実践入門：モダンフロントエンド開発のベストプラクティス"
+summary: |-
+  本書は、Webpack 実践入門：モダンフロントエンド開発のベストプラクティスに関する実践的なガイドです。
+  各章では具体的な実装例とベストプラクティスを交えながら、
+  段階的に理解を深められる構成となっています。
+
+topics: 
+  - programming
+  - development
+  - technology
+  - engineering
+  - guide
+
+published: true
+price: 1000
+chapters:
+  - ch20250208-55c9
+  - ch20250208-4cd0
+  - ch20250208-d830
+  - ch20250208-7c1f
+  - ch20250208-859f
+  - ch20250208-0b6c
+  - ch20250208-5ed2
+  - ch20250208-1fb4
+  - ch20250208-f548
