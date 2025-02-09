@@ -1,8 +1,18 @@
 const { execSync } = require('child_process');
 const { generateDateBasedSlug } = require('./slug');
 
-// クリップボードの内容を取得
+// クリップボードまたは標準入力から内容を取得
 function getClipboardContent() {
+    // 標準入力からデータが来ているか確認
+    if (!process.stdin.isTTY) {
+        try {
+            return require('fs').readFileSync(0, 'utf-8'); // 0 は標準入力を表す
+        } catch (error) {
+            console.error('標準入力からの読み取りに失敗しました:', error);
+        }
+    }
+
+    // クリップボードから取得
     try {
         if (process.platform === 'darwin') {
             return execSync('pbpaste').toString();
@@ -30,7 +40,11 @@ function parseClipboardContent(content) {
     const title = lines[0].replace(/^[「」]/g, '').trim();
     console.log('デバッグ: タイトル:', title);
 
-    // 残りの行から章を抽出
+    // 2行目をトピックとして扱う（記事用）
+    const topic = lines[1]?.replace(/^[\*\-]\s+/, '').trim() || 'programming';
+    console.log('デバッグ: トピック:', topic);
+
+    // 残りの行から章を抽出（書籍用）
     const chapters = lines
         .slice(1)  // タイトル行をスキップ
         .filter(line => line.trim().startsWith('* ') || line.trim().startsWith('- '))
@@ -45,11 +59,8 @@ function parseClipboardContent(content) {
         console.log(`デバッグ: 章${i + 1}:`, ch.title);
     });
 
-    if (chapters.length === 0) {
-        throw new Error('章の情報が見つかりませんでした。各章は "* " または "- " で始まる行として記述してください。');
-    }
-
-    return { title, chapters };
+    // 両方の情報を返す
+    return { title, topic, chapters };
 }
 
 module.exports = {

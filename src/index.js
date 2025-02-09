@@ -8,6 +8,7 @@ const { generateDateBasedSlug } = require('./utils/slug');
 const { generateBookCover } = require('./services/coverGenerator');
 const { enhanceStructure } = require('./services/structureEnhancer');
 const { generateChapterContent } = require('./services/contentGenerator');
+const { generateArticle } = require('./services/articleGenerator');
 
 // メイン処理
 async function main() {
@@ -20,7 +21,33 @@ async function main() {
     const clipboardContent = getClipboardContent();
     console.log('デバッグ: クリップボードの内容:', clipboardContent);
 
-    // 入力データを解析
+    // 記事生成
+    console.log('\n📝 記事を生成中...');
+    const { title, topic } = parseClipboardContent(clipboardContent);
+    const article = await generateArticle(title, topic);
+    const articleSlug = generateDateBasedSlug('article');
+    const articlePath = path.join(process.cwd(), 'articles', `${articleSlug}.md`);
+
+    // 記事のフロントマターとコンテンツを作成
+    const articleContent = `---
+title: "${article.title}"
+emoji: "${article.emoji}"
+type: "${article.type}"
+topics: ${JSON.stringify(article.topics)}
+published: ${article.published}
+---
+
+${article.content}`;
+
+    fs.writeFileSync(articlePath, articleContent);
+
+    console.log('\n✨ Zenn Article を生成しました！');
+    console.log(`📗 タイトル: ${article.title}`);
+    console.log(`📁 Article スラッグ: ${articleSlug}`);
+    console.log(`📂 保存先: ${articlePath}`);
+
+    // 書籍生成
+    console.log('\n📚 書籍を生成中...');
     const { title: originalTitle, chapters: originalChapters } = parseClipboardContent(clipboardContent);
 
     // 構成を改善
