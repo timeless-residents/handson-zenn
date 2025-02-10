@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "57c9f39fef31de1b",
+        "id": "9686999e6e34a6bb",
         "type": "tabs",
         "children": [
           {
-            "id": "f3d5ef7b2a33cd3a",
+            "id": "aa5b6df96c425c10",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
             }
           }
         ]
@@ -36,7 +38,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -158,7 +161,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f3d5ef7b2a33cd3a",
+  "active": "aa5b6df96c425c10",
   "lastOpenFiles": [
     "books/939a2ea86f16bb/example2.md",
     "books/939a2ea86f16bb/example1.md",
