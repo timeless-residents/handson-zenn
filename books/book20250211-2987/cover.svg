@@ -1,0 +1,40 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EEEEEE;stop-opacity:1" />
+    </linearGradient>
+    <filter id="textShadow" x="-0.1" y="-0.1" width="1.2" height="1.2">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer in="offsetblur" type="linear" slope="1" intercept="-0.2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <g transform="translate(25, 50)">
+    <text x="0" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="76" font-weight="bold" fill="#007AFF" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+      Apple Silicon
+    </text>
+    <text x="0" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="76" font-weight="bold" fill="#007AFF" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+      実践開発環境
+    </text>
+    <text x="0" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="76" font-weight="bold" fill="#007AFF" text-rendering="optimizeLegibility" filter="url(#textShadow)">
+      構築
+    </text>
+
+    <text x="0" y="400" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" fill="#673AB7" text-rendering="optimizeLegibility" font-weight="bold" filter="url(#textShadow)">
+      パフォーマンス最大化と
+    </text>
+    <text x="0" y="450" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" fill="#673AB7" text-rendering="optimizeLegibility" font-weight="bold" filter="url(#textShadow)">
+      トラブルシューティング
+    </text>
+
+    <path d="M350 580 L450 680 L300 680 Z" fill="#007AFF" transform="translate(-50,-10)" />
+  </g>
+</svg>

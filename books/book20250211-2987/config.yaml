@@ -1,0 +1,24 @@
+title: "Apple Silicon 実践開発環境構築：パフォーマンス最大化とトラブルシューティング"
+summary: |-
+  本書は、Apple Silicon 実践開発環境構築：パフォーマンス最大化とトラブルシューティングに関する実践的なガイドです。
+  各章では具体的な実装例とベストプラクティスを交えながら、
+  段階的に理解を深められる構成となっています。
+
+topics: 
+  - programming
+  - development
+  - technology
+  - engineering
+  - guide
+
+published: true
+price: 1000
+chapters:
+  - ch20250211-3680
+  - ch20250211-b52f
+  - ch20250211-4fcf
+  - ch20250211-03e1
+  - ch20250211-6b9e
+  - ch20250211-d97d
+  - ch20250211-735a
+  - ch20250211-f16d
