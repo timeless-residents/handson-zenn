@@ -3,11 +3,11 @@ const { GEMINI_API_KEY } = require('../config/gemini');
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
-async function generateArticleContent(title, topic) {
+async function generateArticleContent(title, chapters) {
     const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
     const prompt = `
-技術記事「${title}」を書いてください。以下の要件に従ってください：
+技術記事「${title}」を13,000字を目安に書いてください。以下の要件に従ってください：
 
 - Markdown形式で書く
 - 技術的な正確性を重視
@@ -16,7 +16,7 @@ async function generateArticleContent(title, topic) {
 - 段階的な説明で理解しやすくする
 - 結論と次のステップを含める
 
-トピック: ${topic}
+構成素材情報: ${chapters}
 `;
 
     const result = await model.generateContent(prompt);
@@ -24,12 +24,12 @@ async function generateArticleContent(title, topic) {
     return response.text();
 }
 
-async function generateArticleEmoji(title, topic) {
+async function generateArticleEmoji(title, chapters) {
     const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
     const prompt = `
 技術記事「${title}」に最適な絵文字を1つ選んでください。
-トピック: ${topic}
+構成素材情報: ${chapters}
 
 以下の条件を考慮してください：
 - 記事の内容を視覚的に表現できる
@@ -44,15 +44,39 @@ async function generateArticleEmoji(title, topic) {
     return response.text().trim();
 }
 
-async function generateArticle(title, topic) {
-    const content = await generateArticleContent(title, topic);
-    const emoji = await generateArticleEmoji(title, topic);
+async function generateArticleTopics(title, chapters) {
+    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+
+    const prompt = `
+技術記事「${title}」に最適な
+ハッシュタグ記号を取り除いた英語のハッシュタグリストを5つ選んでください。
+構成素材情報: ${chapters}
+
+以下の条件を考慮してください：
+- 記事の内容を視覚的に表現できる
+- 技術的なトピックに相応しい
+- 分かりやすく親しみやすい
+
+カンマ区切りで返してください。テキストに記号、空白は含めないでください。
+ハッシュタグ記号、説明は不要です。
+出力例： topic1,topic2,topic3,topic4,topic5
+`;
+
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    return response.text().trim().replace(/^-\s*/, '').replace(/\s+/g, '').split(",");
+}
+
+async function generateArticle(title, chapters) {
+    const content = await generateArticleContent(title, chapters);
+    const emoji = await generateArticleEmoji(title, chapters);
+    const topic = await generateArticleTopics(title, chapters);
 
     const article = {
         title,
         emoji,
         type: "tech",
-        topics: [topic],
+        topics: topic,
         published: false,
         content
     };

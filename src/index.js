@@ -8,6 +8,7 @@ const { generateDateBasedSlug } = require('./utils/slug');
 const { generateBookCover } = require('./services/coverGenerator');
 const { enhanceStructure } = require('./services/structureEnhancer');
 const { generateChapterContent } = require('./services/contentGenerator');
+const { generateBookConfig } = require('./services/bookConfigGenerator');
 const { generateArticle } = require('./services/articleGenerator');
 
 // メイン処理
@@ -23,8 +24,8 @@ async function main() {
 
     // 記事生成
     console.log('\n📝 記事を生成中...');
-    const { title, topic } = parseClipboardContent(clipboardContent);
-    const article = await generateArticle(title, topic);
+    const { title, chapters } = parseClipboardContent(clipboardContent);
+    const article = await generateArticle(title, chapters);
     const articleSlug = generateDateBasedSlug('article');
     const articlePath = path.join(process.cwd(), 'articles', `${articleSlug}.md`);
 
@@ -60,24 +61,7 @@ ${article.content}`;
     fs.mkdirSync(bookDir, { recursive: true });
 
     // config.yaml を生成
-    const configContent = `title: "${enhanced.title}"
-summary: |-
-  本書は、${enhanced.title}に関する実践的なガイドです。
-  各章では具体的な実装例とベストプラクティスを交えながら、
-  段階的に理解を深められる構成となっています。
-
-topics: 
-  - programming
-  - development
-  - technology
-  - engineering
-  - guide
-
-published: false
-price: 1000
-chapters:
-${enhanced.chapters.map(chapter => `  - ${chapter.slug}`).join('\n')}
-`;
+    const configContent = await generateBookConfig(enhanced);
 
     fs.writeFileSync(path.join(bookDir, 'config.yaml'), configContent);
 

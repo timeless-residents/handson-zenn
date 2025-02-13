@@ -33,6 +33,7 @@ ${chapters.map(ch => `- ${ch.title}`).join('\n')}
 2. その後に各章を ## で始まる見出しとして出力
 3. 各章の下に ### で始まる節を記載
 4. 必要に応じて #### で始まる小節も記載
+5. 読み応え重視で、20章程度の構成を目指す
 `;
 
     try {
@@ -56,7 +57,7 @@ ${chapters.map(ch => `- ${ch.title}`).join('\n')}
                 currentChapter = {
                     title: line.replace('## ', '').trim(),
                     sections: [],
-                    slug: generateDateBasedSlug('ch')
+                    slug: generateDateBasedSlug(`ch${enhancedChapters.length + 1}`)
                 };
             } else if (line.startsWith('### ')) {
                 currentSection = {
@@ -78,7 +79,7 @@ ${chapters.map(ch => `- ${ch.title}`).join('\n')}
         }
 
         return {
-            title: newTitle || title,  // Geminiが新しいタイトルを提供しない場合は元のタイトルを使用
+            title: newTitle || title, 
             chapters: enhancedChapters
         };
     } catch (error) {

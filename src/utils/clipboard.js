@@ -36,31 +36,48 @@ function parseClipboardContent(content) {
         throw new Error('クリップボードの内容が空です');
     }
 
-    // 最初の行をタイトルとして扱う
-    const title = lines[0].replace(/^[「」]/g, '').trim();
+    const title = lines[0]
+        .replace(/^#{1,6}\s*/g, '')  // 任意の数の # を削除
+        .replace(/[『』「」]/g, '')    // 括弧を削除
+        .replace(/#/g, '')           // 行の途中や末尾の # も削除
+        .trim();
+    
+    // const title = lines[0].replace(/^[#「」『』]/g, '').trim();
     console.log('デバッグ: タイトル:', title);
 
     // 2行目をトピックとして扱う（記事用）
-    const topic = lines[1]?.replace(/^[\*\-]\s+/, '').trim() || 'programming';
-    console.log('デバッグ: トピック:', topic);
+    // const topic = lines[1]?.replace(/^[\*\-]\s+/, '').trim() || 'programming';
+    // console.log('デバッグ: トピック:', topic);
 
     // 残りの行から章を抽出（書籍用）
-    const chapters = lines
-        .slice(1)  // タイトル行をスキップ
-        .filter(line => line.trim().startsWith('* ') || line.trim().startsWith('- '))
-        .map(line => ({
-            title: line.replace(/^[\*\-]\s+/, '').trim(),
-            sections: [],
-            slug: generateDateBasedSlug('ch')
-        }));
+    
+    const chapters = [];
+    for (let i = 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        console.log(`デバッグ: 処理中の行 ${i}:`, line);
+        
+        if (line.startsWith('*') || line.startsWith('-')) {
+            const chapterTitle = line
+                .replace(/^[\*\-]\s*/, '')  // 箇条書きの * または - を削除
+                .replace(/：/g, ' ')         // コロンを半角スペースに置換
+                .replace(/#/g, '')          // # 記号を削除
+                .trim();
+            
+            console.log(`デバッグ: 抽出された章タイトル:`, chapterTitle);
+            chapters.push({
+                title: chapterTitle,
+                index: chapters.length + 1
+            });
+        }
+    }
 
     console.log('デバッグ: 抽出された章の数:', chapters.length);
     chapters.forEach((ch, i) => {
-        console.log(`デバッグ: 章${i + 1}:`, ch.title);
+        console.log(`デバッグ: ${i + 1}:`, ch.title);
     });
 
     // 両方の情報を返す
-    return { title, topic, chapters };
+    return { title, chapters };
 }
 
 module.exports = {

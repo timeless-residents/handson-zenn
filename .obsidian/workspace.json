@@ -160,16 +160,5 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false
     }
-  },
-  "active": "aa5b6df96c425c10",
-  "lastOpenFiles": [
-    "books/939a2ea86f16bb/example2.md",
-    "books/939a2ea86f16bb/example1.md",
-    "books/939a2ea86f16bb/config.yaml",
-    "books/939a2ea86f16bb",
-    "books/8416a98e3dd4dd/javascript_basics.md",
-    "books/8416a98e3dd4dd/html_css.md",
-    "books/8416a98e3dd4dd/introduction.md",
-    "books/8416a98e3dd4dd/cover.png"
-  ]
+  }
 }

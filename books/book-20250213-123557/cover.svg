@@ -1,0 +1,48 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: bold;
+      text-rendering: optimizeLegibility;
+      fill: #FFFFFF;
+      stroke: #000000;
+      stroke-width: 1.5;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    }
+    .subtitle {
+      font-family: sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: bold;
+      text-rendering: optimizeLegibility;
+      fill: #FFFFFF;
+      stroke: #000000;
+      stroke-width: 0.75;
+      filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    }
+  </style>
+  <rect width="100%" height="100%" fill="#F5F5F5"/>
+
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#388E3C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)" opacity="0.8"/>
+
+  <text x="250" y="250" text-anchor="middle" class="title" font-size="85">
+    <tspan x="250" font-size="1.6em" dy="-0.8em">Solidity</tspan>
+    <tspan x="250" dy="1em">スマート</tspan>
+    <tspan x="250" dy="1em">コントラクト</tspan>    <tspan x="250" dy="1em">開発</tspan>
+  </text>
+
+  <text x="250" y="580" text-anchor="middle" class="subtitle" font-size="50">
+    <tspan x="250" dy="-0.5em">堅牢なdApp構築と</tspan>
+    <tspan x="250" dy="1em">セキュリティ対策</tspan>
+  </text>
+
+  <path d="M100 450 L200 600 L300 450 Z" fill="#FF9800" transform="translate(100, 350) scale(0.2)" />
+  <path d="M100 450 L200 600 L300 450 Z" fill="#FF9800" transform="translate(200, 350) scale(0.2)" />
+  <path d="M100 450 L200 600 L300 450 Z" fill="#FF9800" transform="translate(300, 350) scale(0.2)" />
+
+</svg>

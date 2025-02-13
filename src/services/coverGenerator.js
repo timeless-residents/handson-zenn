@@ -50,10 +50,8 @@ async function generateCoverSVG(title) {
 以下の点に注意してSVGを生成してください：
 - フォントは system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif を使用
 - テキストには必ずtext-rendering="optimizeLegibility"を指定
-- 長いタイトルは適切に改行して視認性を確保
+- 長いタイトルは適切に改行して視認性を確保、tspanでレイアウトしやすいように工夫
 - テキストには白い縁取りや影を付けて背景との分離を強調
-
-SVGコードのみを出力してください。コメントやマークダウンは不要です。
 
 SVGコードのみを出力してください。コメントやマークダウンは不要です。
 `;
