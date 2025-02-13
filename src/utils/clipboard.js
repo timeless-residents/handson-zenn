@@ -38,6 +38,7 @@ function parseClipboardContent(content) {
 
     const title = lines[0]
         .replace(/^#{1,6}\s*/g, '')  // 任意の数の # を削除
+        .replace(/^-\s*/g, '') 
         .replace(/[『』「」]/g, '')    // 括弧を削除
         .replace(/#/g, '')           // 行の途中や末尾の # も削除
         .trim();

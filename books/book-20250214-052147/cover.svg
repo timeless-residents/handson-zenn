@@ -1,0 +1,60 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title {
+      font-size: 126px;
+      font-weight: bold;
+      fill: #673AB7;
+      text-rendering: optimizeLegibility;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .subtitle {
+      font-size: 48px;
+      fill: #00BCD4;
+      text-rendering: optimizeLegibility;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .outline {
+      stroke: white;
+      stroke-width: 3;
+      paint-order: stroke fill;
+    }
+  </style>
+
+  <rect width="100%" height="100%" fill="#F5F5F5"/>
+
+  <defs>
+    <pattern id="web3Pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L40 20 L20 40 L0 20 Z" fill="#673AB7" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#web3Pattern)"/>
+
+  <g transform="translate(25, 0)">
+    <text x="0" y="0" class="title outline">
+      <tspan x="0" dy="0.9em">Web3</tspan>
+      <tspan x="0" dy="0.9em">開発</tspan>
+    </text>
+
+    <text x="0" y="280" class="subtitle outline">
+      <tspan x="0" dy="0.9em">2025</tspan>
+
+      <tspan x="0" dy="0.9em">最新アーキテクチャと</tspan>
+      <tspan x="0" dy="0.9em">スマートコントラクト</tspan>
+            <tspan x="0" dy="0.9em">セキュリティ、</tspan>
+
+      <tspan x="0" dy="0.9em">スケーラビリティ</tspan>
+    </text>
+  </g>
+
+  <path d="M400 550 C 450 550, 450 650, 400 650" stroke="#00BCD4" stroke-width="5" fill="transparent" stroke-linecap="round"/>
+  <path d="M100 550 C 50 550, 50 650, 100 650" stroke="#00BCD4" stroke-width="5" fill="transparent" stroke-linecap="round"/>
+  <circle cx="400" cy="550" r="10" fill="#00BCD4" />
+  <circle cx="100" cy="550" r="10" fill="#00BCD4" />
+  <circle cx="400" cy="650" r="10" fill="#00BCD4" />
+  <circle cx="100" cy="650" r="10" fill="#00BCD4" />
+</svg>
