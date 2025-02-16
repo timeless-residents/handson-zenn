@@ -1,0 +1,68 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <style>        
+        text {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        text-rendering: optimizeLegibility;
+        }
+    </style>
+    <rect width="100%"
+          height="100%"
+          fill="#FFFFFF" />
+    <defs>
+        <linearGradient id="gradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#E3F2FD;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#FFFFFF;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#gradient)" />
+    <g transform="translate(25, 0)">
+        <text x="0"
+              y="0"
+              font-size="102"
+              font-weight="bold"
+              fill="#2196F3"
+              stroke="#FFFFFF"
+              stroke-width="2"
+              paint-order="stroke">
+            <tspan x="0"
+                   dy="0.9em">実践</tspan>
+            <tspan x="0"
+                   dy="0.9em">トレード</tspan>
+            <tspan x="0"
+                   dy="0.9em">戦略</tspan>
+        </text>
+        <text x="0"
+              y="300"
+              font-size="60"
+              fill="#FF9800"
+              stroke="#FFFFFF"
+              stroke-width="1"
+              paint-order="stroke">
+            <tspan x="0"
+                   dy="0.9em">TradingView,</tspan>
+            <tspan x="0"
+                   dy="0.9em">データ分析,</tspan>
+            <tspan x="0"
+                   dy="0.9em">自動売買システム</tspan>
+            <tspan x="0"
+                   dy="0.9em">構築</tspan>
+        </text>
+        <g transform="translate(350, 550)">
+            <path d="M10 10 L40 10 L25 40 Z"
+                  fill="#2196F3" />
+        </g>
+        <g transform="translate(50, 550)">
+            <path d="M10 10 L40 10 L25 40 Z"
+                  fill="#FF9800" />
+        </g>
+    </g>
+</svg>
