@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 700">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#f0f0f0;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#e0e0e0;stop-opacity:1" />
+        </linearGradient>
+        <filter id="textShadow"
+                x="-10%"
+                y="-10%"
+                width="120%"
+                height="120%">
+            <feDropShadow dx="2"
+                          dy="2"
+                          stdDeviation="3"
+                          flood-color="rgba(0,0,0,0.5)" />
+        </filter>
+        <filter id="whiteOutline"
+                x="-10%"
+                y="-10%"
+                width="120%"
+                height="120%">
+            <feMorphology operator="dilate"
+                          radius="1"
+                          in="SourceAlpha"
+                          result="thicken" />
+            <feColorMatrix type="matrix"
+                           values="1 0 0 0 1  0 1 0 0 1  0 0 1 0 1  0 0 0 1 0"
+                           in="thicken"
+                           result="outline" />
+            <feMerge>
+                <feMergeNode in="outline" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25, 0)">
+        <text x="0"
+              y="120"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#3498db"
+              text-rendering="optimizeLegibility"
+              filter="textShadow, whiteOutline">
+            <tspan x="0"
+                   dy="0">ホームラボ</tspan>
+        </text>
+        <text x="0"
+              y="230"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#3498db"
+              text-rendering="optimizeLegibility"
+              filter="textShadow, whiteOutline">
+            <tspan x="0"
+                   dy="0">進化論：</tspan>
+        </text>
+        <text x="0"
+              y="340"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="56"
+              font-weight="bold"
+              fill="#2ecc71"
+              text-rendering="optimizeLegibility"
+              filter="textShadow, whiteOutline">
+            <tspan x="0"
+                   dy="0">自宅サーバーで学ぶ</tspan>
+        </text>
+        <text x="0"
+              y="410"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="56"
+              font-weight="bold"
+              fill="#2ecc71"
+              text-rendering="optimizeLegibility"
+              filter="textShadow, whiteOutline">
+            <tspan x="0"
+                   dy="0">実践インフラ</tspan>
+        </text>
+        <text x="0"
+              y="480"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="56"
+              font-weight="bold"
+              fill="#2ecc71"
+              text-rendering="optimizeLegibility"
+              filter="textShadow, whiteOutline">
+            <tspan x="0"
+                   dy="0">エンジニアリング</tspan>
+        </text>
+    </g>
+    <g transform="translate(350, 550)">
+        <rect width="80"
+              height="80"
+              fill="#3498db"
+              rx="10"
+              ry="10"
+              transform="rotate(45)" />
+    </g>
+    <g transform="translate(100, 550)">
+        <rect width="80"
+              height="80"
+              fill="#2ecc71"
+              rx="10"
+              ry="10"
+              transform="rotate(45)" />
+    </g>
+</svg>
