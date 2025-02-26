@@ -4,7 +4,7 @@ const { GEMINI_API_KEY } = require('../config/gemini');
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 async function generateArticleContent(title, chapters) {
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
 
     const prompt = `
 技術記事「${title}」を13,000字を目安に書いてください。以下の要件に従ってください：
@@ -25,7 +25,7 @@ async function generateArticleContent(title, chapters) {
 }
 
 async function generateArticleEmoji(title, chapters) {
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
 
     const prompt = `
 技術記事「${title}」に最適な絵文字を1つ選んでください。
@@ -45,7 +45,7 @@ async function generateArticleEmoji(title, chapters) {
 }
 
 async function generateArticleTopics(title, chapters) {
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
 
     const prompt = `
 技術記事「${title}」に最適な
