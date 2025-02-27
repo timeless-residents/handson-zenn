@@ -1,0 +1,46 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F9FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E9ECEF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="textShadow" x="-0.2" y="-0.2" width="1.4" height="1.4">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="1" dy="1" result="offsetblur"/>
+      <feComponentTransfer in="offsetblur" type="linear" slope="0.5"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="whiteStroke" x="-0.2" y="-0.2" width="1.4" height="1.4">
+      <feMorphology operator="dilate" radius="1" in="SourceAlpha" result="dilatedAlpha"/>
+      <feColorMatrix in="dilatedAlpha" type="matrix" values="1 0 0 0 1   0 1 0 0 1   0 0 1 0 1   0 0 0 1 0" result="colored"/>
+      <feComposite in="colored" in2="SourceGraphic" operator="over"/>
+    </filter>
+
+  </defs>
+
+  <rect width="500" height="700" fill="url(#bgGradient)" />
+
+  <g transform="translate(25, 50)">
+    <text x="0" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#007BFF" text-rendering="optimizeLegibility" filter="whiteStroke">
+      <tspan x="0" dy="0em">Immutable</tspan>
+      <tspan x="0" dy="1.2em">X</tspan>
+    </text>
+
+    <text x="0" y="300" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="bold" fill="#28A745" text-rendering="optimizeLegibility" filter="whiteStroke">
+      <tspan x="0" dy="0em">実践Web3開発：</tspan>
+      <tspan x="0" dy="1.2em">スケーラブルな</tspan>
+      <tspan x="0" dy="1.2em">NFTプラットフォーム構築</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(350, 550)">
+    <circle cx="0" cy="0" r="30" fill="#007BFF" />
+    <circle cx="70" cy="0" r="30" fill="#28A745" />
+    <circle cx="35" cy="60" r="30" fill="#007BFF" />
+  </g>
+
+</svg>
