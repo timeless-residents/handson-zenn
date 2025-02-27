@@ -9,7 +9,7 @@ const { generateBookCover } = require('./services/coverGenerator');
 const { enhanceStructure } = require('./services/structureEnhancer');
 const { generateChapterContent } = require('./services/contentGenerator');
 const { generateBookConfig } = require('./services/bookConfigGenerator');
-const { generateArticle } = require('./services/articleGenerator');
+const { generateArticle, generateArticleWithBookReference } = require('./services/articleGenerator');
 
 // メイン処理
 async function main() {
@@ -21,31 +21,6 @@ async function main() {
     // クリップボードの内容を取得して解析
     const clipboardContent = getClipboardContent();
     console.log('デバッグ: クリップボードの内容:', clipboardContent);
-
-    // 記事生成
-    console.log('\n📝 記事を生成中...');
-    const { title, chapters } = parseClipboardContent(clipboardContent);
-    const article = await generateArticle(title, chapters);
-    const articleSlug = generateDateBasedSlug('article');
-    const articlePath = path.join(process.cwd(), 'articles', `${articleSlug}.md`);
-
-    // 記事のフロントマターとコンテンツを作成
-    const articleContent = `---
-title: "${article.title}"
-emoji: "${article.emoji}"
-type: "${article.type}"
-topics: ${JSON.stringify(article.topics)}
-published: ${article.published}
----
-
-${article.content}`;
-
-    fs.writeFileSync(articlePath, articleContent);
-
-    console.log('\n✨ Zenn Article を生成しました！');
-    console.log(`📗 タイトル: ${article.title}`);
-    console.log(`📁 Article スラッグ: ${articleSlug}`);
-    console.log(`📂 保存先: ${articlePath}`);
 
     // 書籍生成
     console.log('\n📚 書籍を生成中...');
@@ -109,6 +84,42 @@ ${section.subsections.map(subsection => `- ${subsection}`).join('\n')}`).join('\
         }
     });
     console.log(`\n📂 保存先: ${bookDir}`);
+
+    // 書籍を紹介する記事を生成
+    console.log('\n📝 書籍を紹介する記事を生成中...');
+    const { title, chapters } = parseClipboardContent(clipboardContent);
+    
+    // 書籍情報を作成
+    const bookInfo = {
+        title: enhanced.title,
+        slug: bookSlug,
+        chapters: enhanced.chapters,
+        topics: enhanced.topics || []
+    };
+    
+    // 書籍紹介記事を生成
+    const article = await generateArticleWithBookReference(title, chapters, bookInfo);
+    const articleSlug = generateDateBasedSlug('article');
+    const articlePath = path.join(process.cwd(), 'articles', `${articleSlug}.md`);
+
+    // 記事のフロントマターとコンテンツを作成
+    const articleContent = `---
+title: "${article.title}"
+emoji: "${article.emoji}"
+type: "${article.type}"
+topics: ${JSON.stringify(article.topics)}
+published: ${article.published}
+---
+
+${article.content}`;
+
+    fs.writeFileSync(articlePath, articleContent);
+
+    console.log('\n✨ Zenn Article を生成しました！');
+    console.log(`📗 タイトル: ${article.title}`);
+    console.log(`📁 Article スラッグ: ${articleSlug}`);
+    console.log(`📂 保存先: ${articlePath}`);
+    console.log(`📚 紹介されている書籍: ${enhanced.title} (${bookSlug})`);
 }
 
 main().catch(console.error);

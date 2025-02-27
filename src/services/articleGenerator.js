@@ -3,8 +3,29 @@ const { GEMINI_API_KEY } = require('../config/gemini');
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
-async function generateArticleContent(title, chapters) {
+async function generateArticleContent(title, chapters, bookInfo = null) {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+
+    let bookReference = '';
+    if (bookInfo) {
+        bookReference = `
+また、この記事は『${bookInfo.title}』という書籍の内容を紹介しています。
+以下の書籍情報を記事の最後に必ず含めてください：
+
+- 書籍タイトル：${bookInfo.title}
+- 書籍スラッグ：${bookInfo.slug}
+- チャプター数：${bookInfo.chapters.length}
+- 主なトピック：${bookInfo.topics ? bookInfo.topics.join(', ') : 'なし'}
+
+記事の最後に、書籍へのリンクとして以下の形式で紹介してください：
+\`\`\`
+:::message
+より詳しい内容は書籍『${bookInfo.title}』をご覧ください。
+https://zenn.dev/books/${bookInfo.slug}
+:::
+\`\`\`
+`;
+    }
 
     const prompt = `
 技術記事「${title}」を13,000字を目安に書いてください。以下の要件に従ってください：
@@ -17,6 +38,7 @@ async function generateArticleContent(title, chapters) {
 - 結論と次のステップを含める
 
 構成素材情報: ${chapters}
+${bookReference}
 `;
 
     const result = await model.generateContent(prompt);
@@ -67,8 +89,8 @@ async function generateArticleTopics(title, chapters) {
     return response.text().trim().replace(/^-\s*/, '').replace(/\s+/g, '').split(",");
 }
 
-async function generateArticle(title, chapters) {
-    const content = await generateArticleContent(title, chapters);
+async function generateArticleWithBookReference(title, chapters, bookInfo = null) {
+    const content = await generateArticleContent(title, chapters, bookInfo);
     const emoji = await generateArticleEmoji(title, chapters);
     const topic = await generateArticleTopics(title, chapters);
 
@@ -84,6 +106,11 @@ async function generateArticle(title, chapters) {
     return article;
 }
 
+async function generateArticle(title, chapters) {
+    return generateArticleWithBookReference(title, chapters);
+}
+
 module.exports = {
-    generateArticle
+    generateArticle,
+    generateArticleWithBookReference
 };
