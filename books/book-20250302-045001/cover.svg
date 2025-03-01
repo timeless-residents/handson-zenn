@@ -1,0 +1,92 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F5F5F5;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#E0E0E0;stop-opacity:1" />
+        </linearGradient>
+        <filter id="textShadow"
+                x="-100%"
+                y="-100%"
+                width="300%"
+                height="300%">
+            <feGaussianBlur in="SourceAlpha"
+                            stdDeviation="3" />
+            <feOffset dx="2"
+                      dy="2"
+                      result="offsetblur" />
+            <feMerge>
+                <feMergeNode in="offsetblur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25, 0)">
+        <text x="0"
+              y="20"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="70"
+              font-weight="bold"
+              fill="#4CAF50"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="0.7em">フロントエンド</tspan>
+            <tspan x="0"
+                   dy="0.9em">開発者のための</tspan>
+        </text>
+        <text x="0"
+              y="190"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="60"
+              font-weight="bold"
+              fill="#4CAF50"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="0.7em">実践関数型</tspan>
+            <tspan x="0"
+                   dy="0.9em">プログラミング</tspan>
+        </text>
+        <text x="0"
+              y="350"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="80"
+              font-weight="bold"
+              fill="#FF9800"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="0.7em">Elmで学ぶ</tspan>
+            <tspan x="0"
+                   dy="0.9em">堅牢なUI構築</tspan>
+            <tspan x="0"
+                   dy="0.9em">と実務応用</tspan>
+        </text>
+    </g>
+    <g transform="translate(120, 40)">
+        <path d="M 250 580 a 50 50 0 1 0 100 0"
+              fill="none"
+              stroke="#4CAF50"
+              stroke-width="8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              filter="url(#textShadow)" />
+        <path d="M 250 580 a 50 50 0 1 1 100 0"
+              fill="none"
+              stroke="#FF9800"
+              stroke-width="8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              filter="url(#textShadow)" />
+    </g>
+</svg>
