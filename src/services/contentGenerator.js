@@ -1,16 +1,7 @@
-const { genAI, generationConfig } = require('../config/gemini');
+const { getAICompletion } = require('../config/ai');
 
-// Geminiを使用してチャプターの内容を生成
+// チャプターの内容を生成
 async function generateChapterContent(chapter) {
-    const model = genAI.getGenerativeModel({
-        model: "gemini-2.0-flash-exp",
-        generationConfig,
-    });
-    const chatSession = model.startChat({
-        generationConfig,
-        history: [],
-    });
-
     const prompt = `
 あなたは技術書の執筆経験が豊富なエキスパートです。
 以下の章を、実践的で価値の高い内容になるように執筆してください。
@@ -45,8 +36,8 @@ ${section.subsections.map(sub => `- ${sub}`).join('\n')}`).join('\n')}
 `;
 
     try {
-        const result = await chatSession.sendMessage(prompt);
-        return result.response.text();
+        // デフォルトで'flash'タイプのモデルを使用（Geminiの場合はflash、OpenAIの場合はo3-mini-high）
+        return await getAICompletion(prompt, 'default');
     } catch (error) {
         console.error('Chapter content generation error:', error);
         return `# ${chapter.title}\n\n内容の生成中にエラーが発生しました。`;

@@ -1,16 +1,7 @@
-const { genAI, generationConfig } = require('../config/gemini');
+const { getAICompletion } = require('../config/ai');
 
 // タイトルからテーマや特徴を抽出
 async function analyzeTitle(title) {
-    const model = genAI.getGenerativeModel({
-        model: "gemini-2.0-flash-exp",
-        generationConfig,
-    });
-    const chatSession = model.startChat({
-        generationConfig,
-        history: [],
-    });
-
     const prompt = `
 タイトル「${title}」を分析し、以下の情報を抽出してください。
 JSON形式で出力してください：
@@ -29,8 +20,7 @@ JSON形式で出力してください：
 `;
 
     try {
-        const result = await chatSession.sendMessage(prompt);
-        const text = result.response.text();
+        const text = await getAICompletion(prompt, 'default');
         
         // Markdownのコードブロックを除去
         const jsonText = text.replace(/```json\n?|\n?```/g, '').trim();

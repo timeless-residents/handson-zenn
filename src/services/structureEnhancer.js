@@ -1,17 +1,8 @@
-const { genAI, generationConfig } = require('../config/gemini');
+const { getAICompletion } = require('../config/ai');
 const { generateDateBasedSlug } = require('../utils/slug');
 
-// Geminiを使用して構成を改善
+// 書籍構成を改善
 async function enhanceStructure(title, chapters) {
-    const model = genAI.getGenerativeModel({
-        model: "gemini-2.0-flash-exp",
-        generationConfig,
-    });
-    const chatSession = model.startChat({
-        generationConfig,
-        history: [],
-    });
-
     const prompt = `
 あなたは技術書執筆のエキスパートです。
 以下の技術書の構成を、より実践的で価値の高い内容になるように改善してください。
@@ -37,9 +28,8 @@ ${chapters.map(ch => `- ${ch.title}`).join('\n')}
 `;
 
     try {
-        const result = await chatSession.sendMessage(prompt);
-        const enhancedStructure = result.response.text();
-        console.log('Gemini Response:', enhancedStructure);
+        const enhancedStructure = await getAICompletion(prompt, 'default');
+        console.log('AI Response:', enhancedStructure);
         
         const lines = enhancedStructure.split('\n').filter(line => line.trim());
         let newTitle = '';

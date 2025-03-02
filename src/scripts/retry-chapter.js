@@ -4,12 +4,21 @@ const fs = require('fs').promises;
 const path = require('path');
 const { generateChapterContent } = require('../services/contentGenerator');
 const { GEMINI_API_KEY } = require('../config/gemini');
+const { OPENAI_API_KEY } = require('../config/openai');
+const { AI_PROVIDER } = require('../config/ai');
 
-if (!GEMINI_API_KEY) {
+// APIキー確認
+if (AI_PROVIDER === 'gemini' && !GEMINI_API_KEY) {
     console.error('環境変数 GEMINI_API_KEY が設定されていません。');
     console.error('.env ファイルに GEMINI_API_KEY を設定してください。');
     process.exit(1);
+} else if (AI_PROVIDER === 'openai' && !OPENAI_API_KEY) {
+    console.error('環境変数 OPENAI_API_KEY が設定されていません。');
+    console.error('.env ファイルに OPENAI_API_KEY を設定してください。');
+    process.exit(1);
 }
+
+console.log(`🤖 AIプロバイダー: ${AI_PROVIDER}`);
 
 async function parseChapterStructure(content) {
     // Extract chapter title (assumes first line is a # heading)

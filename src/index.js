@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const { GEMINI_API_KEY } = require('./config/gemini');
+const { OPENAI_API_KEY } = require('./config/openai');
+const { AI_PROVIDER, REASONING_EFFORT } = require('./config/ai');
 const { getClipboardContent, parseClipboardContent } = require('./utils/clipboard');
 const { generateDateBasedSlug } = require('./utils/slug');
 const { generateBookCover } = require('./services/coverGenerator');
@@ -13,10 +15,17 @@ const { generateArticle, generateArticleWithBookReference } = require('./service
 
 // メイン処理
 async function main() {
-    if (!GEMINI_API_KEY) {
+    // APIキー確認
+    if (AI_PROVIDER === 'gemini' && !GEMINI_API_KEY) {
         console.error('環境変数 GEMINI_API_KEY が設定されていません。');
         process.exit(1);
+    } else if (AI_PROVIDER === 'openai' && !OPENAI_API_KEY) {
+        console.error('環境変数 OPENAI_API_KEY が設定されていません。');
+        process.exit(1);
     }
+    
+    console.log(`🤖 AIプロバイダー: ${AI_PROVIDER}`);
+    console.log(`🧠 推論努力レベル: ${REASONING_EFFORT}`);
 
     // クリップボードの内容を取得して解析
     const clipboardContent = getClipboardContent();

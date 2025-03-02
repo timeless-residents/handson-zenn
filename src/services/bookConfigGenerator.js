@@ -1,4 +1,4 @@
-const { genAI, generationConfig } = require('../config/gemini');
+const { getAICompletion } = require('../config/ai');
 
 /**
  * Generate enhanced book configuration in YAML format
@@ -8,15 +8,6 @@ const { genAI, generationConfig } = require('../config/gemini');
  * @returns {Promise<string>} YAML formatted book configuration
  */
 async function generateBookConfig(enhanced) {
-    const model = genAI.getGenerativeModel({
-        model: "gemini-2.0-flash-exp",
-        generationConfig,
-    });
-    const chatSession = model.startChat({
-        generationConfig,
-        history: [],
-    });
-
     // Generate summary and topics based on the book structure
     const prompt = `
 技術書「${enhanced.title}」の内容について分析し、以下の情報を生成してください：
@@ -44,8 +35,7 @@ ${ch.sections.map(section => `- ${section.title}
 `;
 
     try {
-        const result = await chatSession.sendMessage(prompt);
-        const text = result.response.text();
+        const text = await getAICompletion(prompt, 'default');
         
         // Parse the result
         const [summaryText, topicsSection] = text.split('\nTopics:');

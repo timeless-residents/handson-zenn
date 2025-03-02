@@ -1,22 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
-const { genAI, generationConfig } = require('../config/gemini');
+const { getAICompletion } = require('../config/ai');
 const { analyzeTitle } = require('./bookAnalyzer');
 
 // カバー用のSVGを生成
 async function generateCoverSVG(title) {
     // タイトルを分析
     const analysis = await analyzeTitle(title);
-    
-    const model = genAI.getGenerativeModel({
-        model: "gemini-2.0-flash-exp",
-        generationConfig,
-    });
-    const chatSession = model.startChat({
-        generationConfig,
-        history: [],
-    });
 
     const prompt = `
 あなたはSVGデザインの専門家です。以下の分析に基づいて、技術書のカバー画像用のSVGを生成してください。
@@ -57,8 +48,7 @@ SVGコードのみを出力してください。コメントやマークダウ�
 `;
 
     try {
-        const result = await chatSession.sendMessage(prompt);
-        const svgCode = result.response.text().trim();
+        const svgCode = await getAICompletion(prompt, 'default');
         
         // SVGコードの基本的な検証（より寛容な検証に変更）
         const cleanedSvgCode = svgCode

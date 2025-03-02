@@ -1,11 +1,6 @@
-const { GoogleGenerativeAI } = require('@google/generative-ai');
-const { GEMINI_API_KEY } = require('../config/gemini');
-
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+const { getAICompletion } = require('../config/ai');
 
 async function generateArticleContent(title, chapters, bookInfo = null) {
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
-
     let bookReference = '';
     if (bookInfo) {
         bookReference = `
@@ -41,14 +36,11 @@ https://zenn.dev/books/${bookInfo.slug}
 ${bookReference}
 `;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    return response.text();
+    // プロタイプのモデルを使用（Geminiの場合はpro、OpenAIの場合はgpt4または同等）
+    return await getAICompletion(prompt, 'pro');
 }
 
 async function generateArticleEmoji(title, chapters) {
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
-
     const prompt = `
 技術記事「${title}」に最適な絵文字を1つ選んでください。
 構成素材情報: ${chapters}
@@ -61,14 +53,11 @@ async function generateArticleEmoji(title, chapters) {
 絵文字だけを返してください。説明は不要です。
 `;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    return response.text().trim();
+    const response = await getAICompletion(prompt, 'pro');
+    return response.trim();
 }
 
 async function generateArticleTopics(title, chapters) {
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
-
     const prompt = `
 技術記事「${title}」に最適な
 ハッシュタグ記号を取り除いた英語のハッシュタグリストを5つ選んでください。
@@ -84,9 +73,8 @@ async function generateArticleTopics(title, chapters) {
 出力例： topic1,topic2,topic3,topic4,topic5
 `;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    return response.text().trim().replace(/^-\s*/, '').replace(/\s+/g, '').split(",");
+    const response = await getAICompletion(prompt, 'pro');
+    return response.trim().replace(/^-\s*/, '').replace(/\s+/g, '').split(",");
 }
 
 async function generateArticleWithBookReference(title, chapters, bookInfo = null) {
