@@ -1,7 +1,7 @@
 ---
 title: "Three.jsをはじめよう！- Introduction"
 emoji: "📐"
-type: "tech"
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["threejs","webgl","javascript","3d"]
 published: true
 ---
@@ -86,3 +86,85 @@ HTMLファイルにCDN経由でThree.jsを読み込んで、緑色のキュー�
   </script>
 </body>
 </html>
+```
+
+これを保存してブラウザで開くだけで、回転するキューブが表示されます。ほんの数十行のコードから始められるのは、Three.jsの大きな魅力のひとつです。
+
+---
+
+## 4. Three.jsの知識を深めたい？
+
+「簡単なキューブは出せたけど、もっと本格的に学びたい…」という方は、下記の書籍やサンプルプロジェクトを活用してみてください。
+
+### Three.js Everyday Season 01
+
+[**【NEW】Three.js Everyday Season 01**](https://zenn.dev/idev/books/_evg-threejs)  
+こちらの書籍では、環境構築やThree.jsの基本概念、基本的なジオメトリやマテリアルの使い方、アニメーション・インタラクション・モデル読み込みなど、ステップバイステップで丁寧に解説しています。  
+**JavaScriptの基礎があれば、複雑なWebGLのローレベルAPIを意識せずに3D表現を楽しめるようになる**ことをゴールに据えているため、初心者から中級者まで幅広くおすすめです。
+
+> #### 📌 書籍へのCTA
+> - [Three.js Everyday Season 01](https://zenn.dev/idev/books/_evg-threejs)  
+>  少しずつ実践を重ねてスキルを伸ばすスタイルで、いつの間にかThree.jsを自在に操れるようになります！
+
+---
+
+## 5. ショールームギャラリーで実例をチェック！
+
+### handson-threejs
+
+- **GitHubリポジトリ**: [timeless-residents/handson-threejs](https://github.com/timeless-residents/handson-threejs)  
+- **デモページ**: [こちら](https://timeless-residents.github.io/handson-threejs/)  
+
+複数のThree.jsシーンを展示するギャラリーサイトで、カテゴリ別にシーンを切り替えたり、検索バーから探したりできます。ソースコードが公開されているため、興味のあるシーンの実装を読むだけでも大いに勉強になるでしょう。
+
+#### セットアップ方法
+
+1. Node.js (v14以上) をインストール  
+2. リポジトリをクローン:
+   ```sh
+   git clone https://github.com/timeless-residents/handson-threejs.git
+   ```
+3. ディレクトリへ移動＆依存関係インストール:
+   ```sh
+   cd handson-threejs
+   npm install
+   ```
+4. 開発サーバー起動:
+   ```sh
+   npm run dev
+   ```
+   ブラウザで `http://localhost:3000` を開くだけ。
+
+複数のユースケース（回転キューブ、パーティクルなど）を覗き見して、コードの書き方やデザインパターンを学んでみてください。
+
+---
+
+## 6. これから始める3Dプログラミングライフ
+
+- **1日1つの小さなデモを作る**  
+  ライトの種類を試してみたり、色を変えてみたりするだけで大きな発見があります。
+- **公式ドキュメント・Examplesを活用**  
+  Three.js公式のexamplesフォルダには多数のサンプルがあり、そのソースコードを読むだけで勉強になります。
+- **メタバースやWebXRとの連携**  
+  VR・ARデバイスにも対応可能で、最先端の3D体験をWebで実現できます。
+- **コミュニティで情報共有**  
+  SNSやブログ、勉強会を通じてアウトプットしながら理解を深めましょう。
+
+---
+
+## 7. まとめ
+
+- **Three.jsはWebGLを楽に扱うためのライブラリ**  
+  JavaScriptの知識だけでも本格的な3Dを実装できる。
+- **充実したコミュニティとリソース**  
+  公式Examples・QiitaやZennなどの日本語情報も豊富で学びやすい。
+- **学習への次のステップ**  
+  - 書籍 [Three.js Everyday Season 01](https://zenn.dev/idev/books/_evg-threejs)  
+  - [handson-threejs](https://github.com/timeless-residents/handson-threejs) プロジェクトでの実例チェック
+
+「ブラウザで動く3Dなんて夢のようだった…」という方も、Three.jsなら思いのほかシンプルに始められます。今回の記事をきっかけに、一歩踏み出してみてはいかがでしょうか？ 次々と新しいアイデアが浮かび、**気づいたら本格的な3Dプログラミングの世界**にハマっているかもしれません！
+
+- - -
+**それでは、Three.jsの冒険を楽しんでください！**  
+
+[Three.js Everyday Season 01](https://zenn.dev/idev/books/_evg-threejs)で、インタラクティブな3D表現の学びをさらに深めましょう。あなたの3Dライフがより充実することを願っています！
