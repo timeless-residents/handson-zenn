@@ -1,0 +1,106 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F5F5F5;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#E0E0E0;stop-opacity:1" />
+        </linearGradient>
+        <filter id="textShadow"
+                x="-100%"
+                y="-100%"
+                width="300%"
+                height="300%">
+            <feDropShadow dx="2"
+                          dy="2"
+                          stdDeviation="3"
+                          flood-color="#000"
+                          flood-opacity="0.3" />
+        </filter>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25, 80)">
+        <text text-rendering="optimizeLegibility"
+              font-family="sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#2196F3"
+              filter="url(#textShadow)">
+            <tspan x="100"
+                   y="0em">Anki</tspan>
+            <tspan x="0"
+                   y="0.8em">Connect</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family="sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#2196F3"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="1.7em">× Python</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family="sans-serif"
+              font-size="42"
+              font-weight="bold"
+              fill="#FFC107"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="246">フラッシュカード学習</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family="sans-serif"
+              font-size="50"
+              font-weight="normal"
+              fill="#333"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="490">自動化レシピと</tspan>
+            <tspan x="0"
+                   y="550">高度なカスタマイズ</tspan>
+        </text>
+    </g>
+    <path d="M 100,400 C 150,450 350,450 400,400"
+          stroke="#2196F3"
+          stroke-width="5"
+          fill="none" />
+    <path d="M 100,400 C 150,350 350,350 400,400"
+          stroke="#2196F3"
+          stroke-width="5"
+          fill="none" />
+    <circle cx="100"
+            cy="400"
+            r="10"
+            fill="#FFC107" />
+    <circle cx="400"
+            cy="400"
+            r="10"
+            fill="#FFC107" />
+    <g transform="translate(120,450)">
+        <rect width="50"
+              height="50"
+              fill="#FFC107"
+              rx="5"
+              ry="5" />
+        <rect x="60"
+              width="50"
+              height="50"
+              fill="#2196F3"
+              rx="5"
+              ry="5" />
+        <rect x="120"
+              width="50"
+              height="50"
+              fill="#FFC107"
+              rx="5"
+              ry="5" />
+    </g>
+</svg>
