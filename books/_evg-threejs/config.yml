@@ -20,9 +20,9 @@ topics:
 published: true
 price: 5000
 chapters:
-  - 1-introduction
-  - 2-getting-started
-  - 3-basic-concepts
-  - 4-basic-usage
-  - 5-usecase-000
-  - 6-conclusion
+  - ch1-introduction
+  - ch2-getting-started
+  - ch3-basic-concepts
+  - ch4-basic-usage
+  - ch5-usecase-000
+  - ch6-conclusion
