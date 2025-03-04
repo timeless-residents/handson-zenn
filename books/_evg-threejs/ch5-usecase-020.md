@@ -1,6 +1,5 @@
 ---
 title: Usecase-020 Winter Snow Scene  
-free: true
 ---
 
 # Usecase-020: Winter Snow Scene

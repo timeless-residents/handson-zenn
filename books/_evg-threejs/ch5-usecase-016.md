@@ -1,6 +1,5 @@
 ---
 title: Usecase-016 Crystal Formation
-free: true
 ---
 # Usecase-016: Crystal Formation
 

@@ -1,6 +1,5 @@
 ---
 title: Usecase-002 Bouncing Torus
-free: true
 ---
 # Usecase-002: Bouncing Torus
 

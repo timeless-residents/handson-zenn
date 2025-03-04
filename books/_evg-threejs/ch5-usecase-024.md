@@ -1,6 +1,5 @@
 ---
 title: Usecase-024 Cup-like Object
-free: true
 ---
 # Usecase-024: Cup-like Object
 

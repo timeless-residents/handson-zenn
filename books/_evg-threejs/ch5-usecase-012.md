@@ -1,6 +1,5 @@
 ---
 title: Usecase-012 Simple Shapes Animation
-free: true
 ---
 # Usecase-012: Simple Shapes Animation
 

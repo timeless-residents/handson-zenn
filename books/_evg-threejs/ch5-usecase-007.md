@@ -1,6 +1,5 @@
 ---
 title: Usecase-007 Color-Changing Octahedron
-free: true
 ---
 # Usecase-007: Color-Changing Octahedron
 

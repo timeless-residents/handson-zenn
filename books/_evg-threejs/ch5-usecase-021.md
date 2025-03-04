@@ -1,6 +1,5 @@
 ---
 title: Usecase-021 Twisted Candy Stick
-free: true
 ---
 # Usecase-021: Twisted Candy Stick
 

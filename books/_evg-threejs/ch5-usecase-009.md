@@ -1,6 +1,5 @@
 ---
 title: Usecase-009 Twisting Torus Knot
-free: true
 ---
 # Usecase-009: Twisting Torus Knot
 

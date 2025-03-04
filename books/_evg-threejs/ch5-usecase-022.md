@@ -1,6 +1,5 @@
 ---
 title: Usecase-022 Curved Tunnel  
-free: true
 ---
 
 # Usecase-022: Curved Tunnel

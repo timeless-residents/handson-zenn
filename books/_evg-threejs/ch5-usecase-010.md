@@ -1,6 +1,5 @@
 ---
 title: Usecase-010 Cube and Sphere Duo
-free: true
 ---
 # Usecase-010: Cube and Sphere Duo
 

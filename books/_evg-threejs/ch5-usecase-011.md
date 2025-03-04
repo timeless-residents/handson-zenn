@@ -1,6 +1,5 @@
 ---
 title: Usecase-011 Interactive Particle System
-free: true
 ---
 # Usecase-011: Interactive Particle System
 

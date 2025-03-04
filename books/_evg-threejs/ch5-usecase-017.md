@@ -1,6 +1,5 @@
 ---
 title: Usecase-017 Ring-Cut Cylinder Pattern
-free: true
 ---
 # Usecase-017: Ring-Cut Cylinder Pattern
 

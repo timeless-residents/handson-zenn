@@ -1,6 +1,5 @@
 ---
 title: Usecase-008 Rotating Dodecahedron
-free: true
 ---
 # Usecase-008: Rotating Dodecahedron
 

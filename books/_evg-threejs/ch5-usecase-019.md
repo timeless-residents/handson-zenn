@@ -1,6 +1,5 @@
 ---
 title: Usecase-019 Cosmic Nebula Effect
-free: true
 ---
 # Usecase-019: Cosmic Nebula Effect
 

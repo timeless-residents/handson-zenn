@@ -1,6 +1,5 @@
 ---
 title: Usecase-001 Animated Icosahedron
-free: true
 ---
 # Usecase-001: Animated Icosahedron
 

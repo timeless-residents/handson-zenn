@@ -1,6 +1,5 @@
 ---
 title: Usecase-004 Rotating Cylinder with Marker
-free: true
 ---
 # Usecase-004: Rotating Cylinder with Marker
 

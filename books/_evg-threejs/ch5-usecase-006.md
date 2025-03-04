@@ -1,6 +1,5 @@
 ---
 title: Usecase-006 Spinning Tetrahedron
-free: true
 ---
 # Usecase-006: Spinning Tetrahedron
 

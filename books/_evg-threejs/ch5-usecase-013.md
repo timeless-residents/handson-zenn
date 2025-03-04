@@ -1,6 +1,5 @@
 ---
 title: Usecase-013 Wave Animation Grid
-free: true
 ---
 # Usecase-013: Wave Animation Grid
 

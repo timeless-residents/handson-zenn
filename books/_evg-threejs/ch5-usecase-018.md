@@ -1,6 +1,5 @@
 ---
 title: Usecase-018 Night City Windows Effect
-free: true
 ---
 # Usecase-018: Night City Windows Effect
 

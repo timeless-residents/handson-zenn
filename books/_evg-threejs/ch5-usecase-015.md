@@ -1,6 +1,5 @@
 ---
 title: Usecase-015 Spiral Tower
-free: true
 ---
 # Usecase-015: Spiral Tower
 

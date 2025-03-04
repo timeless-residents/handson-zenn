@@ -1,6 +1,5 @@
 ---
 title: Usecase-005 Bouncing Cone
-free: true
 ---
 # Usecase-005: Bouncing Cone
 

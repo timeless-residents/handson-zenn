@@ -1,6 +1,5 @@
 ---
 title: Usecase-023 Glass Silhouette Effect
-free: true
 ---
 # Usecase-023: Glass Silhouette Effect
 

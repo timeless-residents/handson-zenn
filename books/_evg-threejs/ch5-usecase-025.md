@@ -1,6 +1,5 @@
 ---
 title: Usecase-025 Wipe Transition Sequencer
-free: true
 ---
 # Usecase-025: Wipe Transition Sequencer
 

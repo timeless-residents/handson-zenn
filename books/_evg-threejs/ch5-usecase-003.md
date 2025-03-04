@@ -1,6 +1,5 @@
 ---
 title: Usecase-003 Pulsing Sphere
-free: true
 ---
 # Usecase-003: Pulsing Sphere
 

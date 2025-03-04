@@ -1,6 +1,5 @@
 ---
 title: Usecase-014 Rotating Rings
-free: true
 ---
 # Usecase-014: Rotating Rings
 
