@@ -17,7 +17,7 @@ async function generateThreejsCover(options = {}) {
     date: new Date(),
     updateLine1: "基本シェーダーの実装",
     updateLine2: "パーティクルエフェクト",
-    seasonNumber: "02",
+    seasonNumber: "01",
   };
 
   // オプションをマージ
@@ -63,7 +63,7 @@ async function generateThreejsCover(options = {}) {
         .padStart(2, "0")}月${date
         .getDate()
         .toString()
-        .padStart(2, "0")}日(${dayOfWeek}) 追加!`;
+        .padStart(2, "0")}日(${dayOfWeek}) 更新`;
       dateElement.textContent = dateStr;
     } else {
       console.warn("⚠️ update-date 要素が見つかりません");
