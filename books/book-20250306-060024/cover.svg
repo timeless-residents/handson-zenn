@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 700">
+    <!-- Background with Zenn-like gradient -->
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  stop-color="#3EA8FF" />
+            <stop offset="100%"
+                  stop-color="#1F6ED4" />
+        </linearGradient>
+        <linearGradient id="textGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  stop-color="#FFFFFF" />
+            <stop offset="100%"
+                  stop-color="#E6F0FF" />
+        </linearGradient>
+    </defs>
+    <!-- Background -->
+    <rect width="500"
+          height="700"
+          fill="url(#bgGradient)" />
+    <!-- Decorative elements -->
+    <circle cx="400"
+            cy="100"
+            r="80"
+            fill="rgba(255,255,255,0.1)" />
+    <circle cx="450"
+            cy="150"
+            r="40"
+            fill="rgba(255,255,255,0.08)" />
+    <circle cx="50"
+            cy="600"
+            r="100"
+            fill="rgba(255,255,255,0.1)" />
+    <!-- Tech pattern decoration (nodes and connections) -->
+    <g opacity="0.15"
+       fill="none"
+       stroke="white"
+       stroke-width="2">
+        <circle cx="80"
+                cy="200"
+                r="10"
+                fill="white" />
+        <circle cx="150"
+                cy="250"
+                r="10"
+                fill="white" />
+        <circle cx="220"
+                cy="180"
+                r="10"
+                fill="white" />
+        <circle cx="120"
+                cy="150"
+                r="10"
+                fill="white" />
+        <line x1="80"
+              y1="200"
+              x2="150"
+              y2="250" />
+        <line x1="150"
+              y1="250"
+              x2="220"
+              y2="180" />
+        <line x1="220"
+              y1="180"
+              x2="120"
+              y2="150" />
+        <line x1="120"
+              y1="150"
+              x2="80"
+              y2="200" />
+    </g>
+    <!-- Zenn logo hint (simplified) -->
+    <g transform="translate(430, 650) scale(0.3)">
+        <path d="M67,19.52v42.1H0V19.52H15.46v30.7H51.52v-30.7H67Z"
+              fill="white"
+              opacity="0.7" />
+    </g>
+    <!-- Main title text (simplified and larger) -->
+    <text x="20"
+          y="120"
+          font-family="sans-serif"
+          font-size="150"
+          font-weight="bold"
+          fill="url(#textGradient)"
+          letter-spacing="-1">
+        <tspan x="20"
+               dy="0em">MMO</tspan>
+        <tspan x="20"
+               dy="1em">Game</tspan>
+        <tspan x="20"
+               font-size="0.8em"
+               dy="1.2em">作り方</tspan>
+    </text>
+    <!-- Subtitle -->
+    <text x="20"
+          y="520"
+          font-family="sans-serif"
+          font-size="70"
+          font-weight="bold"
+          fill="url(#textGradient)">
+        <tspan x="20"
+               dy="0">Node.js ＆ </tspan>
+        <tspan x="20"
+               dy="1em">WebSocket</tspan>
+        <tspan x="20"
+               dy="1em">実践ガイド</tspan>
+    </text>
+</svg>
