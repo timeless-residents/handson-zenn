@@ -1,0 +1,72 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <style>        
+        .title {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        fill: #fff;
+        stroke: #000;
+        stroke-width: 1px;
+        }
+        .subtitle {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        text-rendering: optimizeLegibility;
+        fill: #333;
+        }
+    </style>
+    <rect width="100%"
+          height="100%"
+          fill="#F5F5F5" />
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#2196F3;stop-opacity:0.3" />
+            <stop offset="100%"
+                  style="stop-color:#FFC107;stop-opacity:0.3" />
+        </linearGradient>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25, 50)">
+        <text class="title"
+              x="0"
+              y="60"
+              font-size="96">
+            <tspan x="0"
+                   dy="0">IoT現場</tspan>
+        </text>
+        <text class="title"
+              x="0"
+              y="150"
+              font-size="96">
+            <tspan x="0"
+                   dy="0">実装</tspan>
+        </text>
+        <text class="title"
+              x="0"
+              y="240"
+              font-size="96">
+            <tspan x="0"
+                   dy="0">バイブル</tspan>
+        </text>
+        <text class="subtitle"
+              x="0"
+              y="350"
+              font-size="60">
+            <tspan x="0"
+                   dy="0">センサー</tspan>
+            <tspan x="0"
+                   dy="1.2em">ネットワーク構築</tspan>
+            <tspan x="0"
+                   dy="1.2em">データ活用</tspan>
+            <tspan x="0"
+                   dy="1.2em">課題解決の羅針盤</tspan>
+        </text>
+    </g>
+</svg>
