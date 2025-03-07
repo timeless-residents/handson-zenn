@@ -63,13 +63,13 @@
         <!-- Semi-transparent background for update text - enlarged -->
         <rect x="20" y="510" width="460" height="180" rx="20" fill="#000000" opacity="0.4"/>
         <!-- Update date - enlarged and with ID added -->
-        <text id="update-date" x="43" y="550" font-family="sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF" opacity="0.9">2025年03月06日(木) 更新</text>
+        <text id="update-date" x="43" y="550" font-family="sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF" opacity="0.9">2025年03月08日(土) 更新</text>
         <!-- Update content that can be multiple lines - enlarged -->
         <text id="update-content">
             <!-- First line of update content with ID -->
-            <tspan id="update-line1" x="35" y="610" font-family="sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" opacity="0.9">モーションブラー</tspan>
+            <tspan id="update-line1" x="35" y="610" font-family="sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" opacity="0.9">天井ライトと反射床</tspan>
             <!-- Second line of update content with ID -->
-            <tspan id="update-line2" x="35" y="660" font-family="sans-serif" font-size="40" font-weight="bold" fill="#FFFFFF" opacity="0.9">振動錯覚を生み出す</tspan>
+            <tspan id="update-line2" x="35" y="660" font-family="sans-serif" font-size="40" font-weight="bold" fill="#FFFFFF" opacity="0.9">スペキュラを試す</tspan>
         </text>
     </g>
 </svg>
