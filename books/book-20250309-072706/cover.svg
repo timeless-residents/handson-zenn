@@ -1,0 +1,85 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <style>        
+        text {
+        font-family:sans-serif;
+        text-rendering: optimizeLegibility;
+        }
+    </style>
+    <rect width="500"
+          height="700"
+          fill="#f8f9fa" />
+    <linearGradient id="bgGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%">
+        <stop offset="0%"
+              style="stop-color:#e9ecef;stop-opacity:1" />
+        <stop offset="100%"
+              style="stop-color:#dee2e6;stop-opacity:1" />
+    </linearGradient>
+    <rect width="500"
+          height="700"
+          fill="url(#bgGradient)" />
+    <g transform="translate(10, 0)">
+        <text x="0"
+              y="20"
+              font-size="96"
+              font-weight="bold"
+              fill="#007bff"
+              stroke="white"
+              stroke-width="2">
+            <tspan x="0"
+                   dy="0.9em">英語脳を</tspan>
+            <tspan x="0"
+                   dy="0.9em">爆速起動！</tspan>
+        </text>
+        <text x="0"
+              y="210"
+              font-size="80"
+              font-weight="bold"
+              fill="#28a745"
+              stroke="white"
+              stroke-width="1">
+            <tspan x="0"
+                   dy="0.9em">実践型</tspan>
+            <tspan x="0"
+                   dy="0.9em">ビジネス英語</tspan>
+            <tspan x="0"
+                   dy="0.9em">トレーニング</tspan>
+        </text>
+    </g>
+    <g transform="translate(350, 550)">
+        <circle cx="0"
+                cy="0"
+                r="30"
+                fill="#007bff"
+                opacity="0.2" />
+        <circle cx="70"
+                cy="40"
+                r="20"
+                fill="#28a745"
+                opacity="0.3" />
+        <circle cx="-50"
+                cy="80"
+                r="25"
+                fill="#007bff"
+                opacity="0.2" />
+        <circle cx="30"
+                cy="120"
+                r="35"
+                fill="#28a745"
+                opacity="0.3" />
+    </g>
+    <path d="M50,550 C150,400 350,400 450,550"
+          stroke="#007bff"
+          stroke-width="3"
+          fill="none"
+          stroke-dasharray="10,10" />
+    <path d="M50,600 C150,450 350,450 450,600"
+          stroke="#28a745"
+          stroke-width="3"
+          fill="none"
+          stroke-dasharray="5,5" />
+</svg>
