@@ -1,0 +1,72 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F8F9FA;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#E9ECEF;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="500"
+          height="700"
+          fill="url(#bgGradient)" />
+    <g style="font-family: sans-serif; font-weight: bold; text-rendering: optimizeLegibility;">
+        <text x="250"
+              y="150"
+              text-anchor="middle"
+              font-size="96"
+              fill="#007BFF"
+              stroke="white"
+              stroke-width="2">
+            <tspan x="250"
+                   dy="0em">デジタル</tspan>
+            <tspan x="250"
+                   dy="1.2em">国家</tspan>
+            <tspan x="250"
+                   dy="1.2em">戦略 2.0</tspan>
+        </text>
+        <text x="250"
+              y="450"
+              text-anchor="middle"
+              font-size="48"
+              fill="#28A745"
+              stroke="white"
+              stroke-width="1">
+            <tspan x="250"
+                   dy="0em">Web3時代の</tspan>
+            <tspan x="250"
+                   dy="1.2em">金融インフラと</tspan>
+            <tspan x="250"
+                   dy="1.2em">国家主権</tspan>
+        </text>
+    </g>
+    <path d="M100 600 C 150 650, 350 650, 400 600"
+          stroke="#007BFF"
+          stroke-width="5"
+          fill="none" />
+    <path d="M120 620 C 170 670, 330 670, 380 620"
+          stroke="#28A745"
+          stroke-width="3"
+          fill="none" />
+    <circle cx="100"
+            cy="600"
+            r="10"
+            fill="#007BFF" />
+    <circle cx="400"
+            cy="600"
+            r="10"
+            fill="#007BFF" />
+    <circle cx="120"
+            cy="620"
+            r="7"
+            fill="#28A745" />
+    <circle cx="380"
+            cy="620"
+            r="7"
+            fill="#28A745" />
+</svg>
