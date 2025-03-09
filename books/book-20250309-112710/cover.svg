@@ -1,0 +1,103 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%"
+          height="100%"
+          fill="#F8F9FA" />
+    <defs>
+        <filter id="textOutline">
+            <feGaussianBlur in="SourceAlpha"
+                            stdDeviation="2" />
+            <feOffset dx="0"
+                      dy="0"
+                      result="offsetblur" />
+            <feFlood flood-color="black" />
+            <feComposite in2="offsetblur"
+                         operator="in" />
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <g transform="translate(25, 20)">
+        <text x="0"
+              y="0"
+              font-family="sans-serif"
+              font-size="72"
+              font-weight="bold"
+              fill="#29ABE2"
+              text-rendering="optimizeLegibility"
+              filter="url(#textOutline)">
+            <tspan x="0"
+                   dy="0.7em">Eleven Labs</tspan>
+        </text>
+        <text x="0"
+              y="70"
+              font-family="sans-serif"
+              font-size="72"
+              font-weight="bold"
+              fill="#29ABE2"
+              text-rendering="optimizeLegibility"
+              filter="url(#textOutline)">
+            <tspan x="0"
+                   dy="0.7em">超活用！</tspan>
+        </text>
+        <text x="0"
+              y="160"
+              font-family="sans-serif"
+              font-size="72"
+              font-weight="bold"
+              fill="#29ABE2"
+              text-rendering="optimizeLegibility"
+              filter="url(#textOutline)">
+            <tspan x="0"
+                   dy="0.7em">自分の声で</tspan>
+        </text>
+        <text x="0"
+              y="240"
+              font-family="sans-serif"
+              font-size="72"
+              font-weight="bold"
+              fill="#29ABE2"
+              text-rendering="optimizeLegibility"
+              filter="url(#textOutline)">
+            <tspan x="0"
+                   dy="0.7em">創る</tspan>
+        </text>
+        <text x="0"
+              y="390"
+              font-family="sans-serif"
+              font-size="98"
+              font-weight="bold"
+              fill="#FFC107"
+              text-rendering="optimizeLegibility"
+              filter="url(#textOutline)">
+            <tspan x="0"
+                   dy="0">没入型</tspan>
+        </text>
+        <text x="0"
+              y="400"
+              font-family="sans-serif"
+              font-size="48"
+              font-weight="bold"
+              fill="#FFC107"
+              text-rendering="optimizeLegibility"
+              filter="url(#textOutline)">
+            <tspan x="0"
+                   dy="1em">ネイティブ英語学習</tspan>
+        </text>
+        <text x="0"
+              y="530"
+              font-family="sans-serif"
+              font-size="62"
+              fill="#343A40"
+              text-rendering="optimizeLegibility">
+            <tspan x="0"
+                   dy="0em">ゼロから始める</tspan>
+            <tspan x="0"
+                   dy="1em">パーソナルAI</tspan>
+            <tspan x="0"
+                   dy="1em">英語教師育成術</tspan>
+        </text>
+    </g>
+</svg>
