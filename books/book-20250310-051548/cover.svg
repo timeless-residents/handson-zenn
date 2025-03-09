@@ -1,0 +1,98 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%"
+          height="100%"
+          fill="#F8F9FA" />
+    <defs>
+        <filter id="dropShadow"
+                x="-50%"
+                y="-50%"
+                width="200%"
+                height="200%">
+            <feGaussianBlur in="SourceAlpha"
+                            stdDeviation="5" />
+            <feOffset dx="3"
+                      dy="3"
+                      result="offsetblur" />
+            <feMerge>
+                <feMergeNode in="offsetblur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#007BFF;stop-opacity:0.2" />
+            <stop offset="100%"
+                  style="stop-color:#28A745;stop-opacity:0.2" />
+        </linearGradient>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(10, 0)">
+        <text x="0"
+              y="20"
+              font-family="sans-serif"
+              font-size="112"
+              font-weight="bold"
+              fill="white"
+              stroke="black"
+              stroke-width="1"
+              text-rendering="optimizeLegibility"
+              filter="url(#dropShadow)">
+            <tspan x="0"
+                   dy="0.8em">Elastic</tspan>
+            <tspan x="0"
+                   dy="0.8em">search</tspan>
+        </text>
+        <text x="0"
+              y="220"
+              font-family="sans-serif"
+              font-size="92"
+              font-weight="bold"
+              fill="white"
+              stroke="black"
+              stroke-width="1"
+              text-rendering="optimizeLegibility"
+              filter="url(#dropShadow)">
+            <tspan x="0"
+                   dy="0.8em">Enterprise</tspan>
+            <tspan x="0"
+                   dy="1em">Search</tspan>
+        </text>
+        <text x="0"
+              y="420"
+              font-family="sans-serif"
+              font-size="88"
+              font-weight="bold"
+              fill="#343a40"
+              text-rendering="optimizeLegibility">
+            <tspan x="0"
+                   dy="0.8em">実践ガイド</tspan>
+        </text>
+        <text x="0"
+              y="520"
+              font-family="sans-serif"
+              font-size="50"
+              font-weight="bold"
+              fill="#343a40"
+              text-rendering="optimizeLegibility">
+            <tspan x="0"
+                   dy="0.8em">ビジネスを加速する</tspan>
+            <tspan x="0"
+                   dy="1.2em">検索基盤構築</tspan>
+        </text>
+    </g>
+    <path d="M400,50 L450,50 L450,100 L400,100 Z"
+          fill="#007BFF"
+          stroke="black"
+          stroke-width="2" />
+    <path d="M400,150 L450,150 L450,200 L400,200 Z"
+          fill="#28A745"
+          stroke="black"
+          stroke-width="2" />
+</svg>
