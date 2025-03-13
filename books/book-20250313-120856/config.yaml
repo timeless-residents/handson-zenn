@@ -1,0 +1,21 @@
+title: "AI × 図解革命！ Claude 3.7 + draw.io APIで業務効率を爆上げする実践テクニック"
+summary: "Claude 3.7を活用してPythonからDraw.io APIで図表を生成する方法を解説します。基本的なダイアグラム作成からAI支援プログラムフロー可視化まで、実践的なコード例を通して一歩ずつ学べます。"
+topics: ["python", "drawio", "diagram", "api", "claude"]
+published: true
+price: 1000
+chapters:
+  - introduction
+  - environment_setup
+  - basic_concepts
+  - simple_flowchart
+  - styling_nodes
+  - styling_edges
+  - advanced_shapes
+  - database_diagrams
+  - interactive_diagrams
+  - data_driven_diagrams
+  - svg_generation
+  - image_export
+  - drawio_format
+  - program_analysis
+  - conclusion

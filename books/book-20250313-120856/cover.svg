@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 700">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F5F5F5;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#E0E0E0;stop-opacity:1" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="2"
+                          dy="2"
+                          stdDeviation="2"
+                          flood-color="#000000"
+                          flood-opacity="0.3" />
+        </filter>
+        <filter id="stroke">
+            <feMorphology operator="dilate"
+                          radius="1"
+                          in="SourceAlpha"
+                          result="thicken" />
+            <feColorMatrix in="thicken"
+                           type="matrix"
+                           values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                           result="strokeColor" />
+            <feMerge>
+                <feMergeNode in="strokeColor" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25,50)">
+        <text x="0"
+              y="100"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="150"
+              font-weight="bold"
+              fill="#4CAF50"
+              text-rendering="optimizeLegibility"
+              filter="stroke">
+            <tspan x="0"
+                   dy="0">AI ×</tspan>
+        </text>
+        <text x="0"
+              y="220"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#4CAF50"
+              text-rendering="optimizeLegibility"
+              filter="stroke">
+            <tspan x="0"
+                   dy="0">図解革命！</tspan>
+        </text>
+        <text x="0"
+              y="320"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="80"
+              font-weight="bold"
+              fill="#2196F3"
+              text-rendering="optimizeLegibility"
+              filter="stroke">
+            <tspan x="0"
+                   dy="0">Claude 3.7</tspan>
+            <tspan x="0"
+                   dy="1em">draw.io API</tspan>
+        </text>
+        <text x="0"
+              y="470"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="50"
+              font-weight="bold"
+              fill="#2196F3"
+              text-rendering="optimizeLegibility"
+              filter="stroke">
+            <tspan x="0"
+                   dy="0">業務効率を爆上げする</tspan>
+        </text>
+        <text x="0"
+              y="530"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="60"
+              font-weight="bold"
+              fill="#2196F3"
+              text-rendering="optimizeLegibility"
+              filter="stroke">
+            <tspan x="0"
+                   dy="0">実践テクニック</tspan>
+        </text>
+        <g transform="translate(350,550)">
+            <path d="M25 50 L75 50 L50 0 Z"
+                  fill="#4CAF50" />
+        </g>
+        <g transform="translate(50,550)">
+            <circle cx="25"
+                    cy="25"
+                    r="25"
+                    fill="#2196F3" />
+        </g>
+    </g>
+</svg>
