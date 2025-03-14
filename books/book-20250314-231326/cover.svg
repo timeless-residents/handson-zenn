@@ -1,0 +1,71 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#FFFFFF;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#EEEEEE;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#gradient)" />
+    <g transform="translate(25, 25)">
+        <text x="0"
+              y="0"
+              font-family="sans-serif"
+              font-size="120"
+              font-weight="bold"
+              fill="#FF6600"
+              stroke="white"
+              stroke-width="2"
+              text-rendering="optimizeLegibility">
+            <tspan x="0"
+                   dy="0.9em">Scratch</tspan>
+            <tspan x="0"
+                   dy="0.9em">進化論</tspan>
+        </text>
+        <text x="0"
+              y="250"
+              font-family="sans-serif"
+              font-size="75"
+              font-weight="bold"
+              fill="#0099FF"
+              stroke="white"
+              stroke-width="1"
+              text-rendering="optimizeLegibility">
+            <tspan x="0"
+                   dy="0.9em">ゲーム開発</tspan>
+            <tspan x="0"
+                   dy="0.9em">からAI</tspan>
+            <tspan x="0"
+                   dy="0.9em">未来の創造へ</tspan>
+        </text>
+    </g>
+    <g transform="translate(350, 550)">
+        <circle cx="0"
+                cy="0"
+                r="40"
+                fill="#FF6600" />
+        <circle cx="80"
+                cy="0"
+                r="40"
+                fill="#0099FF" />
+        <circle cx="40"
+                cy="70"
+                r="40"
+                fill="#FF6600" />
+    </g>
+    <g transform="translate(100,550)">
+        <path d="M10 0 L40 0 L45 10 L45 30 L40 40 L10 40 L5 30 L5 10 Z"
+              fill="#0099FF"
+              stroke="white"
+              stroke-width="2"
+              transform="scale(1.5)" />
+    </g>
+</svg>
