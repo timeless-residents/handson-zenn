@@ -1,0 +1,103 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F0F0F0;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#E0E0E0;stop-opacity:1" />
+        </linearGradient>
+        <filter id="textShadow"
+                x="-0.2"
+                y="-0.2"
+                width="1.4"
+                height="1.4">
+            <feGaussianBlur in="SourceAlpha"
+                            stdDeviation="2" />
+            <feOffset dx="2"
+                      dy="2"
+                      result="offsetblur" />
+            <feComponentTransfer in="offsetblur"
+                                 type="linear"
+                                 slope="0.5" />
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(10, 50)">
+        <text text-rendering="optimizeLegibility"
+              font-family="sans-serif"
+              font-size="70"
+              font-weight="bold"
+              fill="#4CAF50"
+              stroke="white"
+              stroke-width="2"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="30">脱・お絵描き！</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family=" sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#4CAF50"
+              stroke="white"
+              stroke-width="2"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="120">Python</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family="sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#4CAF50"
+              stroke="white"
+              stroke-width="2"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="220">Turtleで</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family="sans-serif"
+              font-size="55"
+              font-weight="bold"
+              fill="#FFC107"
+              stroke="white"
+              stroke-width="1"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="300">使える ビジュアル</tspan>
+            <tspan x="0"
+                   dy="1.1em">プログラミング</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family=" sans-serif"
+              font-size="40"
+              fill="#333"
+              x="0"
+              y="380">
+            <tspan x="0"
+                   dy="1.2em">データ可視化、ゲーム開発</tspan>
+            <tspan x="0"
+                   dy="1.2em">そして実務へ</tspan>
+        </text>
+        <path d="M100 500 L200 600 L300 500 Z"
+              fill="#4CAF50"
+              stroke="#2E7D32"
+              stroke-width="3" />
+        <circle cx="100"
+                cy="500"
+                r="10"
+                fill="#FFC107" />
+    </g>
+</svg>
