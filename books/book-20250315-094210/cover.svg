@@ -1,0 +1,88 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <style>        
+        .title {
+        font-size: 90px;
+        font-weight: bold;
+        fill: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-rendering: optimizeLegibility;
+        }
+        .subtitle {
+        font-size: 50px;
+        fill: #fff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-rendering: optimizeLegibility;
+        }
+        .background {
+        fill: #3498db;
+        }
+        
+        .icon {
+        fill: #2ecc71;
+        }
+        
+    </style>
+    <rect class="background"
+          width="500"
+          height="700" />
+    <defs>
+        <pattern id="grid"
+                 width="40"
+                 height="40"
+                 patternUnits="userSpaceOnUse">
+            <line x1="0"
+                  y1="40"
+                  x2="40"
+                  y2="40"
+                  stroke="rgba(255,255,255,0.1)"
+                  stroke-width="1" />
+            <line x1="40"
+                  y1="0"
+                  x2="40"
+                  y2="40"
+                  stroke="rgba(255,255,255,0.1)"
+                  stroke-width="1" />
+        </pattern>
+    </defs>
+    <rect width="500"
+          height="700"
+          fill="url(#grid)" />
+    <text x="250"
+          y="180"
+          text-anchor="middle"
+          class="title"
+          font-family="sans-serif">
+        <tspan x="260"
+               dy="-1em">週末起業の</tspan>
+        <tspan x="250"
+               dy="1em">最終形</tspan>
+    </text>
+    <text x="250"
+          y="250"
+          text-anchor="middle"
+          class="subtitle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+        <tspan x="250"
+               dy="0">中小企業を救う</tspan>
+        <tspan x="250"
+               dy="1.2em">マイクロSaaS開発術</tspan>
+    </text>
+    <text x="250"
+          y="390"
+          text-anchor="middle"
+          class="subtitle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+        <tspan x="250"
+               dy="0">低リスクで始める</tspan>
+        <tspan x="250"
+               dy="1.2em">高収益ビジネスモデル</tspan>
+    </text>
+    <path class="icon"
+          d="M100 500 L150 600 L350 600 L400 500 L250 450 Z"
+          fill="#2ecc71" />
+    <circle cx="250"
+            cy="650"
+            r="20"
+            fill="#2ecc71" />
+</svg>
