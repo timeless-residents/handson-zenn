@@ -1,0 +1,40 @@
+title: "OpenAI Responses API実践ガイド"
+summary: "本書は、OpenAI Responses APIの基本から応用までを網羅した実践的なガイドブックです。最先端の大規模言語モデル（LLM）の能力を簡単に活用できるResponses APIの可能性を、46の具体的なユースケースを通じて探ります。基本的なテキスト生成から始まり、システムプロンプトの活用、ストリーミング応答、会話履歴の管理などの基本機能を学びます。さらに、マーケティング文章の自動生成や技術文書の作成支援などのコンテンツ生成、Web検索ツールや外部APIとの連携などのツール統合へと進みます。ビジネス応用では、AIカスタマーサポート、多言語対応、データ分析、専門分野での活用など、実際のビジネスシーンを想定した実装例を紹介します。各ユースケースでは、具体的なコード例とともに、ビジネスでの活用シナリオや実装上の注意点を詳しく解説しています。AIの力を最大限に引き出し、ビジネスや社会に新たな価値をもたらすための実践的なガイドとなるでしょう。"
+topics: ["OpenAI", "API", "AI", "Python"]
+published: true
+price: 1000
+chapters:
+  - introduction
+  - usecase-000
+  - usecase-001
+  - usecase-002
+  - usecase-003
+  - usecase-004
+  - usecase-005
+  - usecase-006
+  - usecase-007
+  - usecase-010
+  - usecase-011
+  - usecase-012
+  - usecase-020
+  - usecase-021
+  - usecase-022
+  - usecase-023
+  - usecase-024
+  - usecase-030
+  - usecase-031
+  - usecase-032
+  - usecase-033
+  - usecase-034
+  - usecase-035
+  - usecase-036
+  - usecase-037
+  - usecase-038
+  - usecase-039
+  - usecase-040
+  - usecase-041
+  - usecase-042
+  - usecase-043
+  - usecase-044
+  - usecase-045
+  - conclusion

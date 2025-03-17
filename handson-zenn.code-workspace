@@ -5,6 +5,9 @@
     },
     {
       "path": "../handson-threejs"
+    },
+    {
+      "path": "../handson-line-works"
     }
   ],
   "settings": {}
