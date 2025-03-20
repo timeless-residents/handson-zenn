@@ -1,0 +1,148 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <style>        
+        .title {
+        font-family: sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        fill: #007BFF;
+        stroke: white;
+        stroke-width: 2;
+        }
+        .subtitle {
+        font-family: sans-serif;
+        font-weight: normal;
+        text-rendering: optimizeLegibility;
+        fill: #28A745;
+        stroke: white;
+        stroke-width: 1;
+        }
+        .shadow {
+        font-family: sans-serif;
+        fill: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <rect width="100%"
+          height="100%"
+          fill="#F8F9FA" />
+    <!-- Background Pattern (Example) -->
+    <defs>
+        <pattern id="grid"
+                 width="20"
+                 height="20"
+                 patternUnits="userSpaceOnUse">
+            <line x1="0"
+                  y1="20"
+                  x2="20"
+                  y2="0"
+                  stroke="lightgray"
+                  stroke-width="0.5" />
+        </pattern>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#grid)"
+          opacity="0.2" />
+    <!-- Main Title with Shadow and White Stroke -->
+    <text x="250"
+          y="150"
+          text-anchor="middle"
+          class="shadow"
+          font-size="98px"
+          dy="2px">
+        <tspan x="250"
+               dy="0em">デジタル</tspan>
+    </text>
+    <text x="250"
+          y="150"
+          text-anchor="middle"
+          class="title"
+          font-size="96px">
+        <tspan x="250"
+               dy="0em">デジタル</tspan>
+    </text>
+    <text x="250"
+          y="250"
+          text-anchor="middle"
+          class="shadow"
+          font-size="98px"
+          dy="2px">
+        <tspan x="250"
+               dy="0em">ツイン</tspan>
+    </text>
+    <text x="250"
+          y="250"
+          text-anchor="middle"
+          class="title"
+          font-size="96px">
+        <tspan x="250"
+               dy="0em">ツイン</tspan>
+    </text>
+    <!-- Subtitle -->
+    <text x="250"
+          y="350"
+          text-anchor="middle"
+          class="shadow"
+          font-size="52px"
+          dy="2px">
+        <tspan x="250"
+               dy="0em">実践ガイド：</tspan>
+    </text>
+    <text x="250"
+          y="350"
+          text-anchor="middle"
+          class="subtitle"
+          font-size="50px">
+        <tspan x="250"
+               dy="0em">実践ガイド：</tspan>
+    </text>
+    <text x="250"
+          y="420"
+          text-anchor="middle"
+          class="shadow"
+          font-size="38px"
+          dy="2px">
+        <tspan x="250"
+               dy="0em">リアルとバーチャル</tspan>
+        <tspan x="250"
+               dy="1em">の融合による</tspan>
+    </text>
+    <text x="250"
+          y="420"
+          text-anchor="middle"
+          class="subtitle"
+          font-size="36px">
+        <tspan x="250"
+               dy="0em">リアルとバーチャル</tspan>
+        <tspan x="250"
+               dy="1em">の融合による</tspan>
+    </text>
+    <text x="250"
+          y="470"
+          text-anchor="middle"
+          class="shadow"
+          font-size="38px"
+          dy="2px">
+        <tspan x="250"
+               dy="1em">ビジネス革新</tspan>
+    </text>
+    <text x="250"
+          y="470"
+          text-anchor="middle"
+          class="subtitle"
+          font-size="36px">
+        <tspan x="250"
+               dy="1em">ビジネス革新</tspan>
+    </text>
+    <!-- Digital Twin Icon (Placeholder - Replace with actual SVG path) -->
+    <path d="M150,550 L350,550 L350,650 L150,650 Z"
+          fill="#007BFF"
+          stroke="white"
+          stroke-width="3" />
+    <circle cx="250"
+            cy="600"
+            r="40"
+            fill="#28A745"
+            stroke="white"
+            stroke-width="3" />
+</svg>
