@@ -1,0 +1,94 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F8F9FA;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#E9ECEF;stop-opacity:1" />
+        </linearGradient>
+        <filter id="textShadow">
+            <feDropShadow dx="2"
+                          dy="2"
+                          stdDeviation="2"
+                          flood-color="rgba(0,0,0,0.5)" />
+        </filter>
+        <style>            
+            .title {
+            font-family:sans-serif;
+            font-weight: bold;
+            text-rendering: optimizeLegibility;
+            fill: #007BFF;
+            stroke: white;
+            stroke-width: 1;
+            }
+            .subtitle {
+            font-family:sans-serif;
+            font-weight: normal;
+            text-rendering: optimizeLegibility;
+            fill: #28A745;
+            stroke: white;
+            stroke-width: 0.5;
+            }
+        </style>
+    </defs>
+    <rect width="500"
+          height="700"
+          fill="url(#bgGradient)" />
+    <polygon points="0,0 500,0 500,150 0,50"
+             fill="rgba(0,123,255,0.1)" />
+    <polygon points="0,650 500,550 500,700 0,700"
+             fill="rgba(40,167,69,0.1)" />
+    <text x="250"
+          y="150"
+          text-anchor="middle"
+          class="title"
+          font-size="96"
+          filter="url(#textShadow)">
+        <tspan x="250"
+               dy="-0.2em">未来を</tspan>
+        <tspan x="250"
+               dy="1.2em">実装する</tspan>
+    </text>
+    <text x="250"
+          y="350"
+          text-anchor="middle"
+          class="subtitle"
+          font-size="50"
+          filter="url(#textShadow)">
+        <tspan x="250"
+               dy="0em">2025年からの</tspan>
+        <tspan x="250"
+               dy="1.2em">コンピューティング</tspan>
+        <tspan x="250"
+               dy="1.2em">パラダイムシフト</tspan>
+    </text>
+    <text x="250"
+          y="650"
+          text-anchor="middle"
+          class="subtitle"
+          font-size="48"
+          filter="url(#textShadow)">
+        <tspan x="250"
+               dy="0em">実践ガイド</tspan>
+    </text>
+    <circle cx="100"
+            cy="550"
+            r="20"
+            fill="#007BFF"
+            opacity="0.7" />
+    <circle cx="400"
+            cy="150"
+            r="20"
+            fill="#28A745"
+            opacity="0.7" />
+    <path d="M150 600 L350 100"
+          stroke="#007BFF"
+          stroke-width="5"
+          stroke-linecap="round"
+          opacity="0.3" />
+</svg>
