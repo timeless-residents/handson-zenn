@@ -1,0 +1,93 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%"
+          height="100%"
+          fill="#F8F9FA" />
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+            <stop offset="0%"
+                  stop-color="#E9ECEF" />
+            <stop offset="100%"
+                  stop-color="#F8F9FA" />
+        </linearGradient>
+        <filter id="shadow"
+                x="-20%"
+                y="-20%"
+                width="140%"
+                height="140%">
+            <feGaussianBlur in="SourceAlpha"
+                            stdDeviation="3" />
+            <feOffset dx="2"
+                      dy="2"
+                      result="offsetblur" />
+            <feMerge>
+                <feMergeNode in="offsetblur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="stroke">
+            <feMorphology operator="dilate"
+                          radius="1"
+                          in="SourceAlpha"
+                          result="thicken" />
+            <feFlood flood-color="white" />
+            <feComposite in="thicken"
+                         in2="SourceGraphic"
+                         operator="in" />
+        </filter>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25,50)">
+        <text text-rendering="optimizeLegibility"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#007BFF"
+              filter="shadow">
+            <tspan x="0"
+                   y="96">実践 AI</tspan>
+            <tspan x="0"
+                   font-size="0.9em"
+                   dy="100">エージェント</tspan>
+        </text>
+        <text text-rendering="optimizeLegibility"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="96"
+              font-weight="bold"
+              fill="#007BFF"
+              filter="shadow">
+            <tspan x="0"
+                   dy="300">ガイド</tspan>
+        </text>
+    </g>
+    <g transform="translate(25,400)">
+        <text text-rendering="optimizeLegibility"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="65"
+              fill="#28A745"
+              filter="shadow">
+            <tspan x="0"
+                   font-size="0.9em"
+                   dy="1em">2025年 ビジネスを</tspan>
+            <tspan x="0"
+                   dy="1em">自律進化させる</tspan>
+            <tspan x="0"
+                   dy="1em">技術と戦略</tspan>
+        </text>
+    </g>
+    <circle cx="400"
+            cy="600"
+            r="40"
+            fill="#28A745"
+            filter="shadow" />
+    <path d="M380 580 L400 600 L420 580 M400 600 L400 620"
+          stroke="white"
+          stroke-width="4"
+          stroke-linecap="round" />
+</svg>
