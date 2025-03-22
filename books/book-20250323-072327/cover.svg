@@ -1,0 +1,107 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <style>        
+        .title {
+        font-family: sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        }
+        
+        .subtitle {
+        font-family: sans-serif;
+        text-rendering: optimizeLegibility;
+        }
+        
+        .shadow {
+        fill: none;
+        stroke-width: 3;
+        stroke-linejoin: round;
+        }
+    </style>
+    <rect width="100%"
+          height="100%"
+          fill="#F0F0F0" />
+    <defs>
+        <pattern id="grid"
+                 width="20"
+                 height="20"
+                 patternUnits="userSpaceOnUse">
+            <path d="M20 0 L0 0 L0 20"
+                  fill="none"
+                  stroke="#E0E0E0"
+                  stroke-width="1" />
+        </pattern>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#grid)"
+          opacity="0.3" />
+    <g transform="translate(25, 20)">
+        <text class="title"
+              x="0"
+              y="0"
+              font-size="120"
+              fill="#2E86AB"
+              stroke="white"
+              stroke-width="4">
+            <tspan x="0"
+                   dy="96">LoRA</tspan>
+        </text>
+        <text class="title"
+              x="0"
+              y="100"
+              font-size="96"
+              fill="#2E86AB"
+              stroke="white"
+              stroke-width="4">
+            <tspan x="0"
+                   dy="96">革命！</tspan>
+        </text>
+        <text class="title"
+              x="0"
+              y="290"
+              font-size="76"
+              fill="#2E86AB"
+              stroke="white"
+              stroke-width="3">
+            <tspan x="0"
+                   dy="0">地球観測衛星</tspan>
+        </text>
+        <text class="title"
+              x="0"
+              y="320"
+              font-size="76"
+              fill="#2E86AB"
+              stroke="white"
+              stroke-width="3">
+            <tspan x="0"
+                   dy="56">画像生成</tspan>
+        </text>
+    </g>
+    <g transform="translate(25, 450)">
+        <text class="subtitle"
+              x="0"
+              y="0"
+              font-size="36"
+              fill="#F2A365"
+              stroke-width="2">
+            <tspan x="0"
+                   dy="36">ビジネスインパクト</tspan>
+        </text>
+        <text class="subtitle"
+              x="0"
+              y="40"
+              font-size="36"
+              fill="#F2A365"
+              stroke-width="2">
+            <tspan x="0"
+                   dy="36">と未来への道標</tspan>
+        </text>
+    </g>
+    <path d="M400 600 L450 650 L350 650 Z"
+          fill="#2E86AB" />
+    <circle cx="100"
+            cy="650"
+            r="30"
+            fill="#F2A365" />
+</svg>
