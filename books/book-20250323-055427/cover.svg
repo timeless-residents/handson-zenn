@@ -1,0 +1,105 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="shadow"
+                x="-100%"
+                y="-100%"
+                width="300%"
+                height="300%">
+            <feDropShadow dx="5"
+                          dy="5"
+                          stdDeviation="5"
+                          flood-color="black"
+                          flood-opacity="0.8" />
+        </filter>
+        <filter id="outline"
+                x="-100%"
+                y="-100%"
+                width="300%"
+                height="300%">
+            <feMorphology operator="dilate"
+                          radius="1"
+                          in="SourceAlpha"
+                          result="thicken" />
+            <feFlood flood-color="white"
+                     result="floodColor" />
+            <feComposite in="floodColor"
+                         in2="thicken"
+                         operator="in"
+                         result="flood" />
+            <feMerge>
+                <feMergeNode in="flood" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="#000000" />
+    <circle cx="250"
+            cy="350"
+            r="200"
+            fill="#228B22"
+            opacity="0.8" />
+    <text x="250"
+          y="150"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          font-size="64"
+          font-weight="bold"
+          fill="#FFD700"
+          text-anchor="middle"
+          dominant-baseline="central"
+          text-rendering="optimizeLegibility"
+          filter="outline">
+        <tspan x="250"
+               dy="-30">AIが蘇らせる！</tspan>
+    </text>
+    <text x="250"
+          y="300"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          font-size="96"
+          font-weight="bold"
+          fill="#FFD700"
+          text-anchor="middle"
+          dominant-baseline="central"
+          text-rendering="optimizeLegibility"
+          filter="outline">
+        <tspan x="250"
+               dy="-50">ドット絵</tspan>
+        <tspan x="250"
+               dy="1em">リバイバル</tspan>
+    </text>
+    <text x="250"
+          y="500"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          font-size="32"
+          font-weight="bold"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          dominant-baseline="central"
+          text-rendering="optimizeLegibility"
+          filter="outline">
+        <tspan x="250"
+               dy="-20">ジェネレーティブAIで</tspan>
+        <tspan x="250"
+               dy="40">レトロゲーム風キャラクターを</tspan>
+        <tspan x="250"
+               dy="40">量産する魔法</tspan>
+    </text>
+    <rect x="100"
+          y="600"
+          width="300"
+          height="50"
+          rx="10"
+          fill="#228B22"
+          filter="shadow" />
+    <text x="250"
+          y="625"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          font-size="24"
+          font-weight="bold"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          dominant-baseline="central"
+          text-rendering="optimizeLegibility">実践ガイド</text>
+</svg>
