@@ -1,0 +1,101 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F5F5F5;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#EEEEEE;stop-opacity:1" />
+        </linearGradient>
+        <filter id="textShadow"
+                x="-0.2"
+                y="-0.2"
+                width="1.4"
+                height="1.4">
+            <feGaussianBlur in="SourceAlpha"
+                            stdDeviation="1.5" />
+            <feOffset dx="1"
+                      dy="1"
+                      result="offsetblur" />
+            <feMerge>
+                <feMergeNode in="offsetblur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <style>            
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap');
+        </style>
+    </defs>
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25, 50)">
+        <text x="0"
+              y="100"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="66"
+              font-weight="bold"
+              fill="#2E86AB"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="0.9em"
+                   stroke="white"
+                   stroke-width="2">イノベーション</tspan>
+            <tspan x="0"
+                   dy="0.9em"
+                   stroke="white"
+                   stroke-width="2">を加速する</tspan>
+        </text>
+        <text x="0"
+              y="300"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="48"
+              font-weight="bold"
+              fill="#F2A365"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="0.9em"
+                   stroke="white"
+                   stroke-width="1">開発：</tspan>
+        </text>
+        <text x="0"
+              y="370"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="32"
+              font-weight="normal"
+              fill="#2E86AB"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="0.9em"
+                   stroke="white"
+                   stroke-width="0.5">コードが組織を変える</tspan>
+            <tspan x="0"
+                   dy="0.9em"
+                   stroke="white"
+                   stroke-width="0.5">実践ガイド</tspan>
+        </text>
+        <g transform="translate(0, 500)">
+            <rect width="450"
+                  height="100"
+                  fill="#2E86AB"
+                  rx="10" />
+            <text x="225"
+                  y="560"
+                  font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+                  font-size="24"
+                  font-weight="bold"
+                  fill="white"
+                  text-anchor="middle"
+                  text-rendering="optimizeLegibility">                
+                DevOps | アジャイル | 組織変革
+            </text>
+        </g>
+    </g>
+</svg>
