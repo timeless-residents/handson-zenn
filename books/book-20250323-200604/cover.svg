@@ -1,0 +1,84 @@
+<svg viewBox="0 0 500 700"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="500"
+          height="700"
+          fill="#F8F9FA" />
+    <defs>
+        <linearGradient id="bgGradient"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                        gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E9ECEF" />
+            <stop offset="1"
+                  stop-color="#F8F9FA" />
+        </linearGradient>
+        <filter id="textShadow"
+                x="-100%"
+                y="-100%"
+                width="300%"
+                height="300%">
+            <feDropShadow dx="2"
+                          dy="2"
+                          stdDeviation="2"
+                          flood-color="#000"
+                          flood-opacity="0.2" />
+        </filter>
+    </defs>
+    <rect width="500"
+          height="700"
+          fill="url(#bgGradient)" />
+    <g transform="translate(25, 50)">
+        <text x="0"
+              y="0"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="90"
+              font-weight="bold"
+              fill="#007BFF"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   y="96">脱・</tspan>
+            <tspan x="0"
+                   dy="100">下請け思考！</tspan>
+        </text>
+        <text x="0"
+              y="220"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="32"
+              font-weight="bold"
+              fill="#28A745"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="60">技術者が主導する</tspan>
+            <tspan x="0"
+                   dy="40">ビジネスモデル設計：</tspan>
+        </text>
+        <text x="0"
+              y="400"
+              font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="36"
+              font-weight="bold"
+              fill="#343A40"
+              text-rendering="optimizeLegibility"
+              filter="url(#textShadow)">
+            <tspan x="0"
+                   dy="40">未来を創る</tspan>
+            <tspan x="0"
+                   dy="40">イノベーション戦略</tspan>
+        </text>
+    </g>
+    <path d="M25 600 L475 600"
+          stroke="#007BFF"
+          stroke-width="4"
+          stroke-linecap="round" />
+    <circle cx="250"
+            cy="650"
+            r="30"
+            fill="#28A745" />
+    <polygon points="230,640 230,660 270,650"
+             fill="white" />
+</svg>
