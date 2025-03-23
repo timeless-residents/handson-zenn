@@ -1,0 +1,66 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6F7FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="shadow" x="-100%" y="-100%" width="300%" height="300%">
+      <feDropShadow dx="4" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.2" />
+    </filter>
+
+    <filter id="whiteStroke">
+      <feMorphology operator="dilate" radius="1" in="SourceGraphic" result="thicken" />
+      <feColorMatrix in="thicken" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" result="stroke"/>
+      <feMerge>
+        <feMergeNode in="stroke"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <g transform="translate(25, 50)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#2E9AFE" text-rendering="optimizeLegibility" filter="shadow">
+      <tspan x="0" dy="100">数字と</tspan>
+      <tspan x="0" dy="100">友達に</tspan>
+      <tspan x="0" dy="100">なる！</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(25, 400)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="bold" fill="#F7DC6F" text-rendering="optimizeLegibility" filter="shadow">
+      <tspan x="0" dy="40">データ活用スキル革命</tspan>
+    </text>
+
+    <text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="normal" fill="#333333" text-rendering="optimizeLegibility">
+      <tspan x="0" dy="90">意思決定を加速する</tspan>
+      <tspan x="0" dy="30">テクニカル分析実践講座</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(350, 550) scale(0.15)">
+    <path d="M83.9,326.3c-4.1,0-8.2,0.3-12.2,0.8c-6.7,0.9-12.6,3.9-17.2,8.5c-11.2,11.2-11.2,29.5,0,40.7c4.6,4.6,10.5,7.5,17.2,8.5
+      c4.1,0.6,8.2,0.8,12.2,0.8c23.1,0,41.9-18.8,41.9-41.9C125.8,345.1,107,326.3,83.9,326.3z M83.9,379.4c-7.2,0-13-5.8-13-13
+      c0-7.2,5.8-13,13-13c7.2,0,13,5.8,13,13C96.9,373.6,91.1,379.4,83.9,379.4z M106.6,246.9c-2.8-3.9-7.4-6.5-12.6-6.5
+      c-9.7,0-17.6,7.9-17.6,17.6c0,5.2,2.6,9.8,6.5,12.6l68.8,49.2c3.9,2.8,6.5,7.4,6.5,12.6c0,9.7-7.9,17.6-17.6,17.6
+      c-5.2,0-9.8-2.6-12.6-6.5L6.3,187.5c-3.9-2.8-6.5-7.4-6.5-12.6c0-9.7,7.9-17.6,17.6-17.6c5.2,0,9.8,2.6,12.6,6.5l68.8,49.2
+      c3.9,2.8,6.5,7.4,6.5,12.6C112.9,239.4,110.2,244.1,106.6,246.9z" fill="#2E9AFE"/>
+  </g>
+
+  <g transform="translate(50, 550) scale(0.15)">
+    <path d="M405.5,284.2c-0.9,0-1.8,0-2.7,0c-15.3-0.2-29.2-7.6-38.5-20.2c-15.7-21.5-3.4-53.9,23.3-69.7l68.9-49.3
+      c3.9-2.8,6.5-7.4,6.5-12.6c0-9.7-7.9-17.6-17.6-17.6c-5.2,0-9.8,2.6-12.6,6.5l-68.9,49.3c-17.5,12.6-39.9,0.3-52.5-17.2
+      c-7.5-10.3-7.5-23.5,0-33.8c12.6-17.5,35-29.8,52.5-17.2l68.9,49.3c2.8,3.9,7.4,6.5,12.6,6.5c9.7,0,17.6-7.9,17.6-17.6
+      c0-5.2-2.6-9.8-6.5-12.6L399.7,5.1c-3.9-2.8-6.5-7.4-6.5-12.6c0-9.7,7.9-17.6,17.6-17.6c5.2,0,9.8,2.6,12.6,6.5l68.9,49.3
+      c15.7,11.3,20.6,33.8,9.4,50.7c-7.9,11-20.3,16.7-33.5,16.7c-1.1,0-2.2,0-3.3,0c-0.9,0-1.7,0-2.6,0c-0.9,0-1.7,0-2.6,0
+      c-1.1,0-2.1,0-3.2,0c-13.2,0-25.6-5.7-33.5-16.7c-11.3-15.6-6.4-38.1,9.4-50.7l68.9-49.3c2.8-3.9,7.4-6.5,12.6-6.5
+      c9.7,0,17.6,7.9,17.6,17.6c0,5.2-2.6,9.8-6.5,12.6l-68.9,49.3c-12.5,9-17.4,24.2-11.7,38.1c4.5,11,15,17.8,27.2,17.8
+      c1.3,0,2.5,0,3.7,0c14.9,0,28.4,8,35.7,21.3c5.2,9.8,5.2,21.9,0,31.7c-7.3,13.3-20.8,21.3-35.7,21.3c-1.2,0-2.5,0-3.7,0
+      c-12.2,0-22.7-6.8-27.2-17.8c-5.7-13.8-0.8-29.1,11.7-38.1l68.9-49.3c3.9-2.8,6.5-7.4,6.5-12.6c0-9.7-7.9-17.6-17.6-17.6
+      c-5.2,0-9.8,2.6-12.6,6.5L439.2,215c-15.7,21.5-48,9.1-23.3-12.4l-68.9-49.3c-2.8-3.9-7.4-6.5-12.6-6.5c-9.7,0-17.6,7.9-17.6,17.6
+      c0,5.2,2.6,9.8,6.5,12.6l68.9,49.3c24.8,18,12.5,50.4-23.3,69.7C434.6,276.6,420.7,284,405.5,284.2z" fill="#F7DC6F"/>
+  </g>
+</svg>
