@@ -1,0 +1,78 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%"
+          height="100%"
+          fill="#fff" />
+    <rect width="100%"
+          height="100%"
+          fill="url(#gradient)" />
+    <g transform="translate(25, 50)">
+        <text x="0"
+              y="200"
+              font-family="sans-serif"
+              font-size="86"
+              font-weight="bold"
+              fill="#007BFF"
+              text-rendering="optimizeLegibility">
+            <tspan x="0"
+                   font-size="70"
+                   dy="1em"
+                   stroke="white"
+                   stroke-width="2px"
+                   stroke-linejoin="round">                
+                技術ドリブン
+            <tspan font-size="0.5em"
+                   dx="-30">な</tspan>
+        </tspan>
+        <tspan x="0"
+               dy="1em"
+               stroke="white"
+               stroke-width="2px"
+               stroke-linejoin="round">ビジネスを</tspan>
+    </text>
+    <text x="0"
+          y="350"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          font-size="96"
+          font-weight="bold"
+          fill="#007BFF"
+          text-rendering="optimizeLegibility">
+        <tspan x="0"
+               dy="0.9em"
+               stroke="white"
+               stroke-width="2px"
+               stroke-linejoin="round">成功に導く</tspan>
+    </text>
+    <text x="0"
+          y="470"
+          font-family="sans-serif"
+          font-size="32"
+          fill="#28A745"
+          text-rendering="optimizeLegibility">
+        <tspan x="0"
+               dy="0.9em"
+               stroke="white"
+               stroke-width="0.5px"
+               stroke-linejoin="round">技術者のための戦略的思考と</tspan>
+        <tspan x="0"
+               dy="0.9em"
+               stroke="white"
+               stroke-width="0.5px"
+               stroke-linejoin="round">実践ガイド</tspan>
+    </text>
+</g>
+<circle cx="400"
+        cy="100"
+        r="30"
+        fill="#28A745"
+        opacity="0.7" />
+<rect x="80"
+      y="50"
+      width="20"
+      height="200"
+      fill="#007BFF"
+      opacity="0.7" />
+<polygon points="200,600 230,650 170,650"
+         fill="#007BFF"
+         opacity="0.7" />
+</svg>
