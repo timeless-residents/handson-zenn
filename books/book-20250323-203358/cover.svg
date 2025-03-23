@@ -1,0 +1,49 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feOffset dx="2" dy="2" in="blur" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="outline">
+        <feMorphology operator="dilate" radius="1" in="SourceAlpha" result="dilated"/>
+        <feFlood flood-color="white" result="floodColor"/>
+        <feComposite in="floodColor" in2="dilated" operator="in" result="flood"/>
+        <feComposite in="SourceGraphic" in2="flood" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <g transform="translate(25, 50)">
+    <text x="0" y="120" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#29abe2" text-rendering="optimizeLegibility" filter="shadow">
+      <tspan x="0" dy="0">開発</tspan>
+      <tspan x="0" dy="110">生産性を</tspan>
+    </text>
+    <text x="0" y="340" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="96" font-weight="bold" fill="#29abe2" text-rendering="optimizeLegibility" filter="shadow">
+      <tspan x="0" dy="0">爆上げ！</tspan>
+    </text>
+
+    <text x="0" y="480" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="bold" fill="#f0ad4e" text-rendering="optimizeLegibility" filter="shadow">
+      <tspan x="0" dy="0" filter="outline">経営と現場を繋ぐ</tspan>
+    </text>
+
+    <text x="0" y="550" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="48" font-weight="bold" fill="#333" text-rendering="optimizeLegibility">
+      <tspan x="0" dy="0" filter="outline">「技術翻訳者」</tspan>
+    </text>
+
+    <text x="0" y="620" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="bold" fill="#333" text-rendering="optimizeLegibility">
+      <tspan x="0" dy="0" filter="outline">育成バイブル</tspan>
+    </text>
+  </g>
+
+    <circle cx="450" cy="650" r="20" fill="#29abe2" filter="shadow"/>
+    <circle cx="50" cy="50" r="20" fill="#f0ad4e" filter="shadow"/>
+</svg>
