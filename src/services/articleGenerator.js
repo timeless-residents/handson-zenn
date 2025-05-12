@@ -22,8 +22,18 @@ https://zenn.dev/books/${bookInfo.slug}
 `;
     }
 
-    const prompt = `
-技術記事「${title}」を13,000字を目安に書いてください。以下の要件に従ってください：
+    // ショートバージョン（APIクォータエラーが発生する場合に使用）
+    const shortPrompt = `
+技術記事「${title}」について、簡潔に2000-3000字で執筆してください。
+${chapters}
+${bookReference}
+
+形式：Markdown
+`;
+
+    // 通常バージョン（クォータに余裕がある場合）
+    const fullPrompt = `
+技術記事「${title}」を10,000字を目安に書いてください。以下の要件に従ってください：
 
 - Markdown形式で書く
 - 技術的な正確性を重視
@@ -36,12 +46,32 @@ https://zenn.dev/books/${bookInfo.slug}
 ${bookReference}
 `;
 
-    // プロタイプのモデルを使用（Geminiの場合はpro、OpenAIの場合はgpt4または同等）
-    return await getAICompletion(prompt, 'pro');
+    try {
+        // 現在のAIプロバイダーに応じてプロンプトの長さを調整
+        const currentProvider = process.env.AI_PROVIDER || 'gemini';
+        const prompt = currentProvider === 'openai' ? shortPrompt : fullPrompt;
+
+        // プロタイプのモデルを使用（Geminiの場合はpro、OpenAIの場合はgpt4に自動マッピング）
+        return await getAICompletion(prompt, 'pro');
+    } catch (error) {
+        console.error('記事の本文生成中にエラーが発生しました:', error);
+
+        // エラーの場合、より短いプロンプトで再試行
+        if (error.message && (error.message.includes('429') || error.message.includes('quota'))) {
+            console.log('📝 トークン制限に到達しました。より短いプロンプトで再試行します...');
+            return await getAICompletion(shortPrompt, 'pro');
+        }
+
+        throw error;
+    }
 }
 
 async function generateArticleEmoji(title, chapters) {
-    const prompt = `
+    // 短いプロンプト版（トークン節約）
+    const shortPrompt = `技術記事「${title}」に最適な絵文字を1つだけ返してください。（${chapters}）`;
+
+    // 詳細なプロンプト版
+    const fullPrompt = `
 技術記事「${title}」に最適な絵文字を1つ選んでください。
 構成素材情報: ${chapters}
 
@@ -53,12 +83,33 @@ async function generateArticleEmoji(title, chapters) {
 絵文字だけを返してください。説明は不要です。
 `;
 
-    const response = await getAICompletion(prompt, 'pro');
-    return response.trim();
+    try {
+        // AIプロバイダーによってプロンプトの長さを調整
+        const currentProvider = process.env.AI_PROVIDER || 'gemini';
+        const prompt = currentProvider === 'openai' ? shortPrompt : fullPrompt;
+
+        const response = await getAICompletion(prompt, 'pro');
+        return response.trim();
+    } catch (error) {
+        console.error('絵文字生成中にエラーが発生しました:', error);
+
+        // エラー時は短いプロンプトで再試行
+        if (error.message && (error.message.includes('429') || error.message.includes('quota'))) {
+            return await getAICompletion(shortPrompt, 'pro');
+        }
+
+        // デフォルト絵文字（エラー時のフォールバック）
+        console.log('⚠️ 絵文字の生成に失敗しました。デフォルト絵文字を使用します');
+        return '📚';
+    }
 }
 
 async function generateArticleTopics(title, chapters) {
-    const prompt = `
+    // 短いプロンプト版
+    const shortPrompt = `技術記事「${title}」に最適な英語のタグを5つカンマ区切りで返してください。例：javascript,react,web,frontend,ui`;
+
+    // 詳細なプロンプト版
+    const fullPrompt = `
 技術記事「${title}」に最適な
 ハッシュタグ記号を取り除いた英語のハッシュタグリストを5つ選んでください。
 構成素材情報: ${chapters}
@@ -73,25 +124,58 @@ async function generateArticleTopics(title, chapters) {
 出力例： topic1,topic2,topic3,topic4,topic5
 `;
 
-    const response = await getAICompletion(prompt, 'pro');
-    return response.trim().replace(/^-\s*/, '').replace(/\s+/g, '').split(",");
+    try {
+        // AIプロバイダーによってプロンプトの長さを調整
+        const currentProvider = process.env.AI_PROVIDER || 'gemini';
+        const prompt = currentProvider === 'openai' ? shortPrompt : fullPrompt;
+
+        const response = await getAICompletion(prompt, 'pro');
+        return response.trim().replace(/^-\s*/, '').replace(/\s+/g, '').split(",");
+    } catch (error) {
+        console.error('トピック生成中にエラーが発生しました:', error);
+
+        // エラー時は短いプロンプトで再試行
+        if (error.message && (error.message.includes('429') || error.message.includes('quota'))) {
+            try {
+                return await getAICompletion(shortPrompt, 'pro')
+                    .then(res => res.trim().replace(/^-\s*/, '').replace(/\s+/g, '').split(","));
+            } catch (e) {
+                // それでも失敗した場合はデフォルトトピックを返す
+                console.log('⚠️ トピックの生成に失敗しました。デフォルトトピックを使用します');
+                return ["tech", "programming", "development", "tutorial", "guide"];
+            }
+        }
+
+        throw error;
+    }
 }
 
 async function generateArticleWithBookReference(title, chapters, bookInfo = null) {
-    const content = await generateArticleContent(title, chapters, bookInfo);
-    const emoji = await generateArticleEmoji(title, chapters);
-    const topic = await generateArticleTopics(title, chapters);
+    try {
+        // 大きな処理をまとめて行うより、個別に処理して失敗した場合の影響を最小限に
+        console.log('- 記事の本文を生成中...');
+        const content = await generateArticleContent(title, chapters, bookInfo);
 
-    const article = {
-        title,
-        emoji,
-        type: "tech",
-        topics: topic,
-        published: false,
-        content
-    };
+        console.log('- 記事の絵文字を生成中...');
+        const emoji = await generateArticleEmoji(title, chapters);
 
-    return article;
+        console.log('- 記事のトピックを生成中...');
+        const topic = await generateArticleTopics(title, chapters);
+
+        const article = {
+            title,
+            emoji,
+            type: "tech",
+            topics: topic,
+            published: false,
+            content
+        };
+
+        return article;
+    } catch (error) {
+        console.error('記事生成中にエラーが発生しました:', error.message);
+        throw error; // 再試行のためにエラーを再スロー
+    }
 }
 
 async function generateArticle(title, chapters) {

@@ -24,6 +24,6 @@
     "node-clipboardy": "^1.0.3",
     "openai": "^4.86.1",
     "sharp": "^0.33.5",
-    "zenn-cli": "^0.1.158"
+    "zenn-cli": "^0.1.159"
   }
 }

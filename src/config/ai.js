@@ -9,15 +9,30 @@ const REASONING_EFFORT = process.env.REASONING_EFFORT || 'medium'; // 'low', 'me
 // AIモデルの取得
 async function getAICompletion(prompt, modelType = 'default') {
     try {
-        if (AI_PROVIDER === 'gemini') {
+        // 環境変数から現在のプロバイダーを取得（動的に変更できるように）
+        const currentProvider = process.env.AI_PROVIDER || AI_PROVIDER;
+
+        if (currentProvider === 'gemini') {
             return await getGeminiCompletion(prompt, modelType);
-        } else if (AI_PROVIDER === 'openai') {
-            return await getOpenAICompletion(prompt, modelType);
+        } else if (currentProvider === 'openai') {
+            // modelTypeの変換（Gemini用の'pro'を適切なOpenAIモデルにマッピング）
+            let openaiModelType = modelType;
+            if (modelType === 'pro') {
+                openaiModelType = 'gpt4';  // Geminiのproモデルに相当するOpenAIモデル
+            }
+            return await getOpenAICompletion(prompt, openaiModelType);
         } else {
-            throw new Error(`未サポートのAIプロバイダー: ${AI_PROVIDER}`);
+            throw new Error(`未サポートのAIプロバイダー: ${currentProvider}`);
         }
     } catch (error) {
+        // エラーメッセージをより詳細に
         console.error('AI completion error:', error);
+
+        // エラーメッセージに詳細情報を追加（再試行メカニズム用）
+        if (error.status) {
+            error.message = `[${error.status} ${error.statusText || ''}] ${error.message}`;
+        }
+
         throw error;
     }
 }
