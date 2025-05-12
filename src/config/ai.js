@@ -88,16 +88,23 @@ async function getOpenAICompletion(prompt, modelType) {
             modelName = OPENAI_MODELS.O3_MINI;
     }
 
+    // 言語指定を追加したシステムプロンプト
+    const systemPrompt = `You are a helpful Japanese technical writer.
+Always respond in Japanese language.
+Format your response using Markdown.
+When writing code examples, use appropriate syntax highlighting.
+Your responses must be in Japanese, never switch to English.`;
+
     // OpenAIモデル用のオプション設定
     const options = {
         model: modelName,
         messages: [
-            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'system', content: systemPrompt },
             { role: 'user', content: prompt }
         ],
         response_format: { type: "text" }
     };
-    
+
     // Note: reasoning_effort parameter is removed as it's not supported by gpt-3.5-turbo
 
     const response = await openai.chat.completions.create(options);

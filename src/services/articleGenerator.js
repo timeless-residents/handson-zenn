@@ -24,18 +24,20 @@ https://zenn.dev/books/${bookInfo.slug}
 
     // ショートバージョン（APIクォータエラーが発生する場合に使用）
     const shortPrompt = `
-技術記事「${title}」について、簡潔に2000-3000字で執筆してください。
+技術記事「${title}」について、日本語で簡潔に2000-3000字で執筆してください。
+必ず日本語で記載してください。英語での出力は避けてください。
 ${chapters}
 ${bookReference}
 
 形式：Markdown
+出力言語：日本語
 `;
 
     // 通常バージョン（クォータに余裕がある場合）
     const fullPrompt = `
-技術記事「${title}」を10,000字を目安に書いてください。以下の要件に従ってください：
+技術記事「${title}」を日本語で10,000字を目安に書いてください。以下の要件に従ってください：
 
-- Markdown形式で書く
+- 日本語でMarkdown形式で書く（必ず日本語で出力）
 - 技術的な正確性を重視
 - コードサンプルを含める（該当する場合）
 - 実践的で具体的な例を含める
@@ -44,6 +46,8 @@ ${bookReference}
 
 構成素材情報: ${chapters}
 ${bookReference}
+
+出力言語：日本語
 `;
 
     try {
@@ -68,7 +72,7 @@ ${bookReference}
 
 async function generateArticleEmoji(title, chapters) {
     // 短いプロンプト版（トークン節約）
-    const shortPrompt = `技術記事「${title}」に最適な絵文字を1つだけ返してください。（${chapters}）`;
+    const shortPrompt = `技術記事「${title}」に最適な絵文字を1つだけ返してください。長い説明は不要です。（${chapters}）出力言語：日本語`;
 
     // 詳細なプロンプト版
     const fullPrompt = `
@@ -81,6 +85,7 @@ async function generateArticleEmoji(title, chapters) {
 - 分かりやすく親しみやすい
 
 絵文字だけを返してください。説明は不要です。
+出力言語：日本語
 `;
 
     try {
@@ -106,7 +111,7 @@ async function generateArticleEmoji(title, chapters) {
 
 async function generateArticleTopics(title, chapters) {
     // 短いプロンプト版
-    const shortPrompt = `技術記事「${title}」に最適な英語のタグを5つカンマ区切りで返してください。例：javascript,react,web,frontend,ui`;
+    const shortPrompt = `技術記事「${title}」に最適な英語のタグを5つカンマ区切りで返してください。英語で回答してください。例：javascript,react,web,frontend,ui`;
 
     // 詳細なプロンプト版
     const fullPrompt = `

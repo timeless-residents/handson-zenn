@@ -1,0 +1,66 @@
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4f4f4" />
+      <stop offset="100%" stop-color="#e9e9e9" />
+    </linearGradient>
+    <filter id="textShadow" x="-0.1" y="-0.1" width="1.2" height="1.2">
+      <feOffset result="offOut" in="SourceAlpha" dx="2" dy="2"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+    <filter id="outline">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="MORPHED"/>
+      <feColorMatrix in="MORPHED" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" result="COLORED"/>
+      <feMerge>
+          <feMergeNode in="COLORED"/>
+          <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <path d="M50,150 L150,50 L450,50 L350,150 Z" fill="#1798c1" opacity="0.1"/>
+  <path d="M50,550 L150,650 L450,650 L350,550 Z" fill="#1798c1" opacity="0.1"/>
+
+  <text x="50%" y="200" text-anchor="middle" font-size="96" font-weight="bold" fill="white"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        text-rendering="optimizeLegibility" filter="outline">
+    <tspan x="50%" dy="-0.1em">Salesforce</tspan>
+    <tspan x="50%" dy="1.1em">実践開発</tspan>
+  </text>
+  <text x="50%" y="200" text-anchor="middle" font-size="96" font-weight="bold" fill="#1798c1"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        text-rendering="optimizeLegibility">
+    <tspan x="50%" dy="-0.1em">Salesforce</tspan>
+    <tspan x="50%" dy="1.1em">実践開発</tspan>
+  </text>
+
+  <text x="50%" y="350" text-anchor="middle" font-size="48" font-weight="bold" fill="white"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        text-rendering="optimizeLegibility" filter="outline">
+    <tspan x="50%" dy="0.2em">バイブル</tspan>
+  </text>
+  <text x="50%" y="350" text-anchor="middle" font-size="48" font-weight="bold" fill="#70696a"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        text-rendering="optimizeLegibility">
+    <tspan x="50%" dy="0.2em">バイブル</tspan>
+  </text>
+
+  <text x="50%" y="450" text-anchor="middle" font-size="24" fill="white"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        text-rendering="optimizeLegibility" filter="outline">
+    <tspan x="50%" dy="0.5em">ビジネスを加速する</tspan>
+    <tspan x="50%" dy="1.2em">技術と戦略</tspan>
+  </text>
+
+  <text x="50%" y="450" text-anchor="middle" font-size="24" fill="#70696a"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        text-rendering="optimizeLegibility">
+    <tspan x="50%" dy="0.5em">ビジネスを加速する</tspan>
+    <tspan x="50%" dy="1.2em">技術と戦略</tspan>
+  </text>
+
+  <image x="200" y="550" width="100" height="100" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASySURBVHhe7ZpdjFVVFMZ/u7v+2909bS66pE315V8l5+FwXQjVqF04c3A0l3Y0N14j0b2J0Jd3Nq7M5Mzd7PbmD93f9d59x+8P7vOfc869973j95h73/nO1vJ3W4vX/iA/8fR3K98r7K/K+gK0Y7H4k55n/K4oA2v64C5hJzP6sN7GzF6k076J0L79e1xHlPzN535J63t0uQ5Qy86Nn/X3x138J48U2d+5pT3u733h9D37l6eN+9T9d+e8zG9d75e85uJ8X9d5+vS79Jd+z+5+j+e/s/V95H9/5vX/yT/p/H/7vG/f7U+U/85g9Y9t/N+W/W/p/zPz/y/8L4vQ/x6k6+sT+572k5/d1bU77P77s/T/6v7+i+H0v41U3z3uU19L7H/n9v7V/p/X/xP3/433/599r5f8T7vU+Pj3uPq35N8799+p5s/V/R16/195/L6779yV6J2v5J176P3l8s+L8+2/36k01x65L7J18/6G0B8P4P0F2f2t6192H853+5a/0P99m+d7y3J+v7e6S9n+8j3v5t1/6bSj+k7l87n1P0Pq5+b3tD3/i+8/v4O90779F4W8d396n+c28vXUv3/o/w79P9u6p7U+r/d3s3xL+V65f5S37/17u5436P0P25+X/y4v0/P39W08W+0e4u3t+z29vFwA+T6u97d69e/s96u771q5t3R/u0n75e99q+9w3799w9F7u4J8+19XJ7u9+X/j/77L37993m/78p9x+1XwQ6+zT05m7J8/2y/bW03aKkH+37z/a3+J78O+0s3uJ8T97787+89b8v++779z7m/Hn0x6V9zD53/X36o25v9h+b7d9S8O+X99/8e+z7f2p95+9f/V65P5S7n75/V17a9n8H6v7qj8P20O3wJ8H6f40p72c6/6/sS8j+6365+9+0f43+9fT9j329a62229+w9b172/p+g9D8O0831N9N8H9g7W9231T7o+n/9+33d97Wz/P6a3+W9/7+38H+9v+X+J+n33f9m879J/wK8n1W839+7n79v/L2l+/f3+p+88d7u8v9428l10n/e/t/x+m+38t3h97v+9v9b+z7975n7435P7L/t/K/4vW/73g+k+VvN97+493+gPz/6n971z/9l87+g9v8N9X+3/x/67u39P7x6L+3v64/78g/08H9/x+m6L0L9+4n3t+r/z+V5//oX035P2P8b+j/X17v1N/7/0f19v99w1eX1D/c5P9+x/x/6/k9b2X2v/r/1v6d8z979e0f/16b4vQvH7u1f9f+z/X33f3v/c/h/67+33X5X29/v635V+d/7v7/9v57+X91/33P43n+7/3v3V/0/z7938f8X95f4//d5//9n+X+z633/92/w8v6vT8X6V8n9P5v//+b9X/f3x/7z7/6/f/0P//9T/19w+f3j1/F/14f92n9D/z97/5f7/f3v5/9P+X+r3/330f/+7/+7j/7v1/8f7/9797/5f8/+z7/7733965W+8wP3X6y/b4Bf4l738B78/4z7L/83w74t73c8/3X7573z+f+s4A87zW9H/476+587+u3QO30h36/43gP7vFf9y49uH/7t77dD/5f++09+33/eX/399m9r/9f3X9f3l/+9/4f+f0f+c+9v774z3892/99/z3938P935m/d/i8w++j33243+703979O/o/55+b4z336c+V/583/935f8/9+5/1/u/zP1/3z7v/976/9H+7/e//X6f81+n/36n2j7+v9/m/P/k/7/v8f76v87+7/4P9/5/9/u3434/r/f/9P+P8v93/d+377/n/8/b9/9b/3+X/p+z/r+/37/p/7f+P7/9r7/7/9f+7/9/5f+r/f/9/uX787280fP176/g+m79g++n8W/X1/W8N3e8e7/hL7/s171vG/b8F8+4L7+zff93/8/4A/L+/3f+n0P95+b+7+r+X/f4H3P/39g9l6L0X2P/X2Pqj+b33/w3m/433V/r+690L3c4A9L2K/36H3399/5e1f1f5/+9+9/d47/X//97g6/g73g9b2n/393/3eH4/73+3/+/29/5/9e+7+7838/33v3/5f3//f4v7/3f+j/3/8f4/3/+f3//f5//v9/5f///5//f///39/f///j//f///9/v///+7///+v////7///+3////r///9f////5///+X////+P///8f////x///88////z///87/////P///w////8AAAAAAA==" />
+</svg>
