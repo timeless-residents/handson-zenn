@@ -250,15 +250,6 @@
           fill="#007BFF">        
         浦安発・災害対策技術
     </text>
-    <text x="500"
-          y="1150"
-          text-anchor="middle"
-          font-family="Arial, sans-serif"
-          font-size="40"
-          font-weight="500"
-          fill="#2C3E50">        
-        デロイトdXG社会課題解決経験者が開発
-    </text>
     <!-- 価格・購入CTA -->
     <rect x="250"
           y="1190"
@@ -284,16 +275,6 @@
           font-weight="500"
           fill="#E3F2FD">        
         今すぐZenn.devで入手
-    </text>
-    <!-- 限定性アピール -->
-    <text x="500"
-          y="1360"
-          text-anchor="middle"
-          font-family="Arial, sans-serif"
-          font-size="32"
-          font-weight="600"
-          fill="#E74C3C">        
-        浦安停電体験者限定・先行公開中
     </text>
     <!-- 装飾的要素（PNG対応） -->
     <g opacity="0.3">
