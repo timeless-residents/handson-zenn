@@ -1,0 +1,261 @@
+<svg viewBox="0 0 500 700"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- より深みのあるグラデーション -->
+        <linearGradient id="bgGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+            <stop offset="0%"
+                  style="stop-color:#F8F9FA;stop-opacity:1" />
+            <stop offset="50%"
+                  style="stop-color:#E9ECEF;stop-opacity:1" />
+            <stop offset="100%"
+                  style="stop-color:#DEE2E6;stop-opacity:1" />
+        </linearGradient>
+        <!-- 技術的な背景パターン -->
+        <pattern id="techPattern"
+                 patternUnits="userSpaceOnUse"
+                 width="20"
+                 height="20">
+            <rect width="20"
+                  height="20"
+                  fill="none" />
+            <circle cx="10"
+                    cy="10"
+                    r="1"
+                    fill="#007BFF"
+                    opacity="0.1" />
+        </pattern>
+        <!-- より強力な影効果 -->
+        <filter id="strongShadow"
+                x="-0.5"
+                y="-0.5"
+                width="2"
+                height="2">
+            <feGaussianBlur in="SourceAlpha"
+                            stdDeviation="3" />
+            <feOffset dx="3"
+                      dy="3"
+                      result="offsetblur" />
+            <feFlood flood-color="#000000"
+                     flood-opacity="0.3" />
+            <feComposite in2="offsetblur"
+                         operator="in" />
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <!-- 光る効果 -->
+        <filter id="techGlow">
+            <feGaussianBlur stdDeviation="4"
+                            result="coloredBlur" />
+            <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <!-- 背景 -->
+    <rect width="100%"
+          height="100%"
+          fill="url(#bgGradient)" />
+    <rect width="100%"
+          height="100%"
+          fill="url(#techPattern)" />
+    <!-- 装飾的な境界線 -->
+    <rect x="10"
+          y="10"
+          width="480"
+          height="680"
+          fill="none"
+          stroke="#007BFF"
+          stroke-width="2"
+          opacity="0.3" />
+    <!-- 中央のレーザー装置（より詳細に） -->
+    <g transform="translate(250,380)">
+        <!-- 外側のフレーム -->
+        <rect x="-40"
+              y="-40"
+              width="80"
+              height="80"
+              fill="#2C3E50"
+              rx="5" />
+        <rect x="-35"
+              y="-35"
+              width="70"
+              height="70"
+              fill="#34495E"
+              rx="3" />
+        <!-- レーザー発射部 -->
+        <circle cx="0"
+                cy="0"
+                r="25"
+                fill="#E74C3C" />
+        <circle cx="0"
+                cy="0"
+                r="20"
+                fill="#C0392B" />
+        <circle cx="0"
+                cy="0"
+                r="15"
+                fill="#FF0000"
+                filter="url(#techGlow)" />
+        <!-- 中央の照準 -->
+        <circle cx="0"
+                cy="0"
+                r="8"
+                fill="none"
+                stroke="#00FF00"
+                stroke-width="2" />
+        <line x1="-12"
+              y1="0"
+              x2="12"
+              y2="0"
+              stroke="#00FF00"
+              stroke-width="1" />
+        <line x1="0"
+              y1="-12"
+              x2="0"
+              y2="12"
+              stroke="#00FF00"
+              stroke-width="1" />
+        <!-- 回転アニメーション -->
+        <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0"
+                          to="360"
+                          dur="8s"
+                          repeatCount="indefinite" />
+    </g>
+    <!-- メインテキスト群 -->
+    <g font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+       font-weight="700"
+       text-rendering="optimizeLegibility">
+        <!-- 上部タイトル：より技術的な印象 -->
+        <text x="250"
+              y="80"
+              text-anchor="middle"
+              font-size="28"
+              fill="#2C3E50"
+              filter="url(#strongShadow)">            
+            ホンビノスメモリアル
+        </text>
+        <!-- サブタイトル：権威性強調 -->
+        <text x="250"
+              y="120"
+              text-anchor="middle"
+              font-size="20"
+              fill="#34495E"
+              filter="url(#strongShadow)">            
+            生命体記録技術の完全ガイド
+        </text>
+        <!-- 技術的権威の証明 -->
+        <text x="250"
+              y="150"
+              text-anchor="middle"
+              font-size="14"
+              fill="#7F8C8D">            
+            世界初 × 災害超越 × 1000年保存
+        </text>
+        <!-- メインキャッチ：より強力に -->
+        <text x="250"
+              y="220"
+              text-anchor="middle"
+              font-size="44"
+              fill="#E74C3C"
+              stroke="#FFFFFF"
+              stroke-width="1"
+              filter="url(#strongShadow)">            
+            サンプルコード完全解説
+        </text>
+        <text x="250"
+              y="270"
+              text-anchor="middle"
+              font-size="38"
+              fill="#C0392B"
+              stroke="#FFFFFF"
+              stroke-width="1"
+              filter="url(#strongShadow)">            
+            レーザー制御システム
+        </text>
+        <!-- 技術的詳細 -->
+        <text x="250"
+              y="320"
+              text-anchor="middle"
+              font-size="16"
+              fill="#2C3E50">            
+            Python × ハードウェア制御 × 材料科学
+        </text>
+        <!-- 中央下部：実用性強調 -->
+        <text x="250"
+              y="500"
+              text-anchor="middle"
+              font-size="20"
+              fill="#27AE60"
+              filter="url(#strongShadow)">            
+            浦安発・災害対策技術
+        </text>
+        <text x="250"
+              y="530"
+              text-anchor="middle"
+              font-size="16"
+              fill="#2C3E50">            
+            デロイトdXG社会課題解決経験者が開発
+        </text>
+        <!-- 価格とCTA -->
+        <rect x="150"
+              y="580"
+              width="200"
+              height="60"
+              fill="#007BFF"
+              rx="5"
+              filter="url(#strongShadow)" />
+        <text x="250"
+              y="610"
+              text-anchor="middle"
+              font-size="24"
+              fill="#FFFFFF"
+              font-weight="800">            
+            ¥1,000
+        </text>
+        <text x="250"
+              y="630"
+              text-anchor="middle"
+              font-size="14"
+              fill="#E3F2FD">            
+            今すぐZenn.devで入手
+        </text>
+        <!-- 緊急性の演出 -->
+        <text x="250"
+              y="670"
+              text-anchor="middle"
+              font-size="12"
+              fill="#E74C3C"
+              font-weight="600">            
+            浦安停電体験者限定・先行公開中
+        </text>
+    </g>
+    <!-- 装飾的な要素：技術感演出 -->
+    <g opacity="0.2">
+        <circle cx="80"
+                cy="100"
+                r="3"
+                fill="#007BFF" />
+        <circle cx="420"
+                cy="150"
+                r="2"
+                fill="#28A745" />
+        <circle cx="60"
+                cy="600"
+                r="2"
+                fill="#FFC107" />
+        <circle cx="440"
+                cy="580"
+                r="3"
+                fill="#DC3545" />
+    </g>
+</svg>
