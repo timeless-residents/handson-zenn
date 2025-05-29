@@ -231,51 +231,6 @@
           fill="#2C3E50">        
         Python × ハードウェア制御 × 材料科学
     </text>
-    <!-- 権威性アピール -->
-    <rect x="60"
-          y="970"
-          width="880"
-          height="200"
-          fill="#F8F9FA"
-          stroke="#007BFF"
-          stroke-width="2"
-          rx="10"
-          filter="url(#dropShadow)" />
-    <text x="500"
-          y="1080"
-          text-anchor="middle"
-          font-family="Arial, sans-serif"
-          font-size="75"
-          font-weight="600"
-          fill="#007BFF">        
-        浦安発・災害対策技術
-    </text>
-    <!-- 価格・購入CTA -->
-    <rect x="250"
-          y="1190"
-          width="500"
-          height="130"
-          fill="#007BFF"
-          rx="15"
-          filter="url(#dropShadow)" />
-    <text x="500"
-          y="1260"
-          text-anchor="middle"
-          font-family="Arial, sans-serif"
-          font-size="80"
-          font-weight="bold"
-          fill="#FFFFFF">        
-        ¥1,000
-    </text>
-    <text x="500"
-          y="1305"
-          text-anchor="middle"
-          font-family="Arial, sans-serif"
-          font-size="40"
-          font-weight="500"
-          fill="#E3F2FD">        
-        今すぐZenn.devで入手
-    </text>
     <!-- 装飾的要素（PNG対応） -->
     <g opacity="0.3">
         <polygon points="50,300 70,280 90,300 70,320"
