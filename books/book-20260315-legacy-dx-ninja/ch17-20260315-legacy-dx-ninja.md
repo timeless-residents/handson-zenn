@@ -214,3 +214,11 @@ def _fallback_score(correct: list, recalled: str) -> int:
 ```
 
 次章では難易度の自動調整アルゴリズムの完全実装を解説する。
+
+:::message
+**この章の実装を単体で試したい方へ**
+
+採点エンジン部分のみをまとめたQiita記事があります。FastAPIのセットアップから動作確認まで、この章よりコンパクトに試せます。
+
+📝 [Claude APIで「自然言語採点エンジン」を作る（Qiita）](https://qiita.com/timeless_residents/items/2026-03-15-claude-api-scoring-engine)
+:::
