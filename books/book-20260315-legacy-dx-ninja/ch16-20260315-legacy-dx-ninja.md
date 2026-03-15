@@ -222,3 +222,10 @@ async function submitRecall() {
 ```
 
 次章ではClaude APIによる採点エンジンの詳細実装を解説する。
+
+:::message
+**UIだけ先に試したい方へ**
+
+フラッシュ表示・タイムバー・ライフ制のUI実装を単体でまとめたQiita記事があります：
+[FastAPI + Vanilla JSで画像フラッシュ表示UIを作る（Qiita）](https://qiita.com/timeless_residents/items/2026-03-15-flash-ui-fastapi-vanillajs)
+:::
