@@ -9,7 +9,7 @@ published: true
 ## TL;DR
 
 - Web Pushは**無料のオープンプロトコル**。SaaSの月額は「管理UIとサポート」の費用
-- **Cloudflare Worker + GitHub Actions + プライベートリポジトリ**で完全自前のプッシュ通知基盤を構築
+- **publicリポジトリでActionsを動かし、センシティブデータはprivateリポジトリに保管**する分離アーキテクチャ
 - 7万組織規模でも**$0/月**、36並列で360万ユーザーまでスケール可能
 - キュー設計により登録と送信を分離、同時登録スパイクに耐える
 
@@ -40,7 +40,7 @@ Cloudflare Worker
   │
   │ GitHub API（PAT）でコミット
   ▼
-プライベートリポジトリ
+プライベートリポジトリ（センシティブデータ保管専用・Actions不要）
   └── memory/queue/{uid}.json   ← キュー
 
 GitHub Actions（cron: 毎朝6:30 JST）
